@@ -1,0 +1,46 @@
+html,
+body,
+#root,
+.reveal {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #111827;
+}
+
+.reveal {
+    background: #111827;
+
+    .slides {
+        height: 100%;
+        width: 1200px;
+    }
+
+    ol.main-tasks {
+        list-style-type: decimal;
+    }
+
+    ol.sub-tasks {
+        counter-reset: item;
+
+        li {
+            counter-increment: item;
+            list-style: none;
+
+            &::marker {
+                content: counter(item, lower-alpha) ') ';
+            }
+        }
+    }
+
+    ol.main-tasks,
+    ol.sub-tasks {
+        li {
+            padding-inline-start: 12px;
+            margin-bottom: 0.2em;
+        }
+    }
+}
