@@ -1,8 +1,11 @@
 import { Deck, Fragment, Slide } from '@revealjs/react';
+import { Coordinates, LaTeX, Mafs, Plot, Theme } from 'mafs';
 import RevealMath from 'reveal.js/plugin/math';
 import 'reveal.js/reveal.css';
 import 'reveal.js/theme/moon.css';
 import './App.css';
+import CoordinateSystems from './slides/CoordinateSystems/CoordinateSystems';
+import NumberLine from './slides/NumberLine/NumberLine';
 
 function App() {
     return (
@@ -31,6 +34,34 @@ function App() {
             <Slide>
                 <h2>Mathematik als Fundament</h2>
                 <h3>Grundlagen für IT und Programmierung</h3>
+            </Slide>
+
+            <NumberLine />
+            <CoordinateSystems />
+
+            <Slide>
+                <h2>Lineare Funktionen</h2>
+
+                {String.raw`\[f(x) = mx + n\]`}
+
+                <Mafs viewBox={{ x: [-5, 10], y: [-3, 3] }} height={570}>
+                    <Coordinates.Cartesian subdivisions={4} />
+                    <Plot.OfX y={(x) => (1 / 2) * x + 1} color={Theme.green} weight={3}></Plot.OfX>
+                    <Plot.OfX y={(x) => -x + 2} color={Theme.violet} weight={3}></Plot.OfX>
+
+                    <g style={{ fontSize: '0.7em' }}>
+                        <LaTeX
+                            tex={String.raw`f(x) = \dfrac{1}{2}x + 1`}
+                            at={[5.5, 2]}
+                            color={Theme.green}
+                        ></LaTeX>
+                        <LaTeX
+                            tex={String.raw`g(x) = -x + 2`}
+                            at={[7, -2]}
+                            color={Theme.violet}
+                        ></LaTeX>
+                    </g>
+                </Mafs>
             </Slide>
 
             <Slide>
