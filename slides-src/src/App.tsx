@@ -5,9 +5,11 @@ import 'reveal.js/theme/moon.css';
 import './App.css';
 import Math from './common/Math';
 import { LATEX_MACROS } from './latex.macros';
+import BinomialPerspective from './slides/BinomialPerspective';
 import CoordinateSystems from './slides/CoordinateSystems';
 import LinearFunctionsIntro from './slides/LinearFunctionsIntro';
 import NumberLine from './slides/NumberLine';
+import PositionalNotation from './slides/PositionalNotation';
 
 function App() {
     return (
@@ -16,7 +18,7 @@ function App() {
                 width: 1600,
                 height: 900,
                 margin: 0.06,
-                center: false,
+                center: true,
                 katex: {
                     local: 'node_modules/katex',
                     // @ts-ignore
@@ -38,6 +40,8 @@ function App() {
             </Slide>
 
             <NumberLine />
+            <PositionalNotation />
+            <BinomialPerspective />
             <CoordinateSystems />
             <LinearFunctionsIntro />
 

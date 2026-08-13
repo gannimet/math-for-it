@@ -17,11 +17,12 @@ body {
 }
 
 .reveal {
-    background: #111827;
+    background: #011c20;
 
     .slides {
         height: 100%;
         width: 1200px;
+        color: var(--r-heading-color);
     }
 
     ol.main-tasks {
