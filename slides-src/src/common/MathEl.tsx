@@ -6,7 +6,7 @@ export type MathProps = {
     asBlock?: boolean;
 };
 
-export default function Math({ tex, asBlock }: MathProps) {
+export default function MathEl({ tex, asBlock }: MathProps) {
     const html = katex.renderToString(tex, {
         displayMode: asBlock,
         macros: LATEX_MACROS,

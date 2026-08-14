@@ -3,7 +3,7 @@ import RevealMath from 'reveal.js/plugin/math';
 import 'reveal.js/reveal.css';
 import 'reveal.js/theme/moon.css';
 import './App.css';
-import Math from './common/Math';
+import MathEl from './common/MathEl';
 import { LATEX_MACROS } from './latex.macros';
 import BinomialPerspective from './slides/BinomialPerspective';
 import CoordinateSystems from './slides/CoordinateSystems';
@@ -57,13 +57,13 @@ function App() {
 
                     <Fragment>
                         <li>
-                            Gegeben sind die Funktionen <Math tex={String.raw`f(x) = 3x + 2`} /> und{' '}
-                            <Math tex={String.raw`g(x) = -0,5x + 4`} />.
+                            Gegeben sind die Funktionen <MathEl tex={String.raw`f(x) = 3x + 2`} />{' '}
+                            und <MathEl tex={String.raw`g(x) = -0,5x + 4`} />.
                             <ol className="sub-tasks">
                                 <li>
-                                    Berechne jeweils <Math tex={String.raw`f(0)`} />,{' '}
-                                    <Math tex={String.raw`f(2)`} /> und{' '}
-                                    <Math tex={String.raw`f(-1)`} />.
+                                    Berechne jeweils <MathEl tex={String.raw`f(0)`} />,{' '}
+                                    <MathEl tex={String.raw`f(2)`} /> und{' '}
+                                    <MathEl tex={String.raw`f(-1)`} />.
                                 </li>
                                 <li>
                                     Bestimme Anstieg und Achsenabschnitt der beiden Funktionen und
@@ -71,8 +71,8 @@ function App() {
                                 </li>
                                 <li>
                                     Berechne jeweils die Nullstellen von{' '}
-                                    <Math tex={String.raw`f(x)`} /> und{' '}
-                                    <Math tex={String.raw`g(x)`} /> und vergleiche sie mit der
+                                    <MathEl tex={String.raw`f(x)`} /> und{' '}
+                                    <MathEl tex={String.raw`g(x)`} /> und vergleiche sie mit der
                                     Zeichnung.
                                 </li>
                             </ol>
@@ -81,8 +81,8 @@ function App() {
 
                     <Fragment>
                         <li>
-                            Eine Gerade verläuft durch die Punkte <Math tex={String.raw`(0,1)`} />{' '}
-                            und <Math tex={String.raw`(2,5)`} />. Bestimme die zugehörige
+                            Eine Gerade verläuft durch die Punkte <MathEl tex={String.raw`(0,1)`} />{' '}
+                            und <MathEl tex={String.raw`(2,5)`} />. Bestimme die zugehörige
                             Funktionsgleichung.
                         </li>
                     </Fragment>
@@ -94,21 +94,21 @@ function App() {
 
                 <ol className="main-tasks">
                     <li>
-                        Berechne den Schnittpunkt der Geraden <Math tex={String.raw`f(x)=x+2`} />{' '}
-                        und <Math tex={String.raw`g(x)=-2x+8`} />.
+                        Berechne den Schnittpunkt der Geraden <MathEl tex={String.raw`f(x)=x+2`} />{' '}
+                        und <MathEl tex={String.raw`g(x)=-2x+8`} />.
                     </li>
 
                     <Fragment>
                         <li>
-                            Gegeben ist die Funktion <Math tex={String.raw`f(x)=3x-1`} />. Bestimme
-                            jeweils die Gleichung der Gerade, die durch den Punkt{' '}
-                            <Math tex={String.raw`(2,0)`} /> und
+                            Gegeben ist die Funktion <MathEl tex={String.raw`f(x)=3x-1`} />.
+                            Bestimme jeweils die Gleichung der Gerade, die durch den Punkt{' '}
+                            <MathEl tex={String.raw`(2,0)`} /> und
                             <ol className="sub-tasks">
                                 <li>
-                                    parallel zu <Math tex={String.raw`f`} /> verläuft.
+                                    parallel zu <MathEl tex={String.raw`f`} /> verläuft.
                                 </li>
                                 <li>
-                                    senkrecht zu <Math tex={String.raw`f`} /> verläuft.
+                                    senkrecht zu <MathEl tex={String.raw`f`} /> verläuft.
                                 </li>
                             </ol>
                         </li>
@@ -117,20 +117,20 @@ function App() {
                     <Fragment>
                         <li>
                             Ein Sensor misst Temperaturwerte, die linear mit der Zeit ansteigen. Bei{' '}
-                            <Math tex={String.raw`t = 0\,\mathrm{min}`} /> zeigt er{' '}
-                            <Math tex={String.raw`18\celsius`} />, bei{' '}
-                            <Math tex={String.raw`t = 10\,\mathrm{min}`} /> zeigt er{' '}
-                            <Math tex={String.raw`23\celsius`} />.
+                            <MathEl tex={String.raw`t = 0\,\mathrm{min}`} /> zeigt er{' '}
+                            <MathEl tex={String.raw`18\celsius`} />, bei{' '}
+                            <MathEl tex={String.raw`t = 10\,\mathrm{min}`} /> zeigt er{' '}
+                            <MathEl tex={String.raw`23\celsius`} />.
                         </li>
 
                         <ol className="sub-tasks">
                             <li>Stelle die Funktionsgleichung auf.</li>
                             <li>
                                 Berechne die Temperatur bei{' '}
-                                <Math tex={String.raw`t = 25\,\mathrm{min}`} />.
+                                <MathEl tex={String.raw`t = 25\,\mathrm{min}`} />.
                             </li>
                             <li>
-                                Nach welcher Zeit werden <Math tex={String.raw`30\celsius`} />{' '}
+                                Nach welcher Zeit werden <MathEl tex={String.raw`30\celsius`} />{' '}
                                 erreicht?
                             </li>
                         </ol>
