@@ -10,78 +10,96 @@ type SquaresConfig = {
     color: string;
 };
 
-export default function BinomialPerspective() {
-    function renderSquares({ name, width, height, startX, startY, color }: SquaresConfig) {
-        const widthIndices = Array.from({ length: width }, (_, i) => i);
-        const heightIndices = Array.from({ length: height }, (_, i) => i);
+const figureStartX = -10;
 
-        return widthIndices.map((xIndex) => {
-            return heightIndices.map((yIndex) => {
-                return (
-                    <Polygon
-                        points={[
-                            [startX + xIndex, startY - yIndex],
-                            [startX + 1 + xIndex, startY - yIndex],
-                            [startX + 1 + xIndex, startY - 1 - yIndex],
-                            [startX + xIndex, startY - 1 - yIndex],
-                        ]}
-                        color={color}
-                        weight={4}
-                        fillOpacity={0.4}
-                        key={`${name}-${xIndex}-${yIndex}`}
-                    />
-                );
-            });
-        });
+export default function BinomialPerspective() {
+    function renderSquare({ name, width, height, startX, startY, color }: SquaresConfig) {
+        return (
+            <Polygon
+                points={[
+                    [startX, startY],
+                    [startX + width, startY],
+                    [startX + width, startY - height],
+                    [startX, startY - height],
+                ]}
+                color={color}
+                weight={3}
+                fillOpacity={0.4}
+                key={name}
+            />
+        );
     }
 
     return (
         <Slide>
             <h2>Perspektivwechsel</h2>
 
-            <Fragment>
-                <Mafs viewBox={{ x: [-6, 6], y: [-6, 6] }} height={570}>
-                    <Coordinates.Cartesian xAxis={false} yAxis={false} />
+            <div className="r-stretch">
+                <Fragment>
+                    <Mafs viewBox={{ x: [-12, 12], y: [-5, 5] }} height={700} pan={false}>
+                        <Coordinates.Cartesian xAxis={false} yAxis={false} />
 
-                    {renderSquares({
-                        name: 's1',
-                        width: 4,
-                        height: 4,
-                        startX: -3,
-                        startY: 3,
-                        color: Theme.blue,
-                    })}
-                    {renderSquares({
-                        name: 's2',
-                        width: 2,
-                        height: 4,
-                        startX: 1,
-                        startY: 3,
-                        color: Theme.pink,
-                    })}
-                    {renderSquares({
-                        name: 's3',
-                        width: 4,
-                        height: 2,
-                        startX: -3,
-                        startY: -1,
-                        color: Theme.pink,
-                    })}
-                    {renderSquares({
-                        name: 's3',
-                        width: 2,
-                        height: 2,
-                        startX: 1,
-                        startY: -1,
-                        color: Theme.green,
-                    })}
+                        {renderSquare({
+                            name: 's1',
+                            width: 4,
+                            height: 4,
+                            startX: figureStartX,
+                            startY: 3,
+                            color: Theme.blue,
+                        })}
+                        {renderSquare({
+                            name: 's2',
+                            width: 2,
+                            height: 4,
+                            startX: figureStartX + 4.05,
+                            startY: 3,
+                            color: Theme.pink,
+                        })}
+                        {renderSquare({
+                            name: 's3',
+                            width: 4,
+                            height: 2,
+                            startX: figureStartX,
+                            startY: -1.05,
+                            color: Theme.pink,
+                        })}
+                        {renderSquare({
+                            name: 's4',
+                            width: 2,
+                            height: 2,
+                            startX: figureStartX + 4.05,
+                            startY: -1.05,
+                            color: Theme.green,
+                        })}
 
-                    <g className="fragment">
-                        <LaTeX tex={String.raw`a`} at={[-1, 4]} />
-                        <LaTeX tex={String.raw`b`} at={[2, 4]} />
-                    </g>
-                </Mafs>
-            </Fragment>
+                        <g className="fragment">
+                            <LaTeX tex={String.raw`a`} at={[figureStartX + 2, 3.7]} />
+                            <LaTeX tex={String.raw`b`} at={[figureStartX + 5, 3.7]} />
+
+                            <LaTeX tex={String.raw`a`} at={[figureStartX - 0.7, 1]} />
+                            <LaTeX tex={String.raw`b`} at={[figureStartX - 0.7, -2.2]} />
+                        </g>
+
+                        <g className="fragment" style={{ fontSize: '0.8em' }}>
+                            <LaTeX tex={String.raw`a^2`} at={[figureStartX + 2.2, 1.1]} />
+                            <LaTeX tex={String.raw`ab`} at={[figureStartX + 5.1, 1.1]} />
+                            <LaTeX tex={String.raw`ab`} at={[figureStartX + 2.1, -2.1]} />
+                            <LaTeX tex={String.raw`b^2`} at={[figureStartX + 5.1, -2.1]} />
+                        </g>
+
+                        <g className="fragment">
+                            <LaTeX tex={String.raw`\iff (a+b)^2 = a^2 + 2ab + b^2`} at={[4, 0]} />
+                        </g>
+
+                        <g className="fragment" style={{ fontSize: '0.7em' }}>
+                            <LaTeX
+                                at={[5, -2]}
+                                tex={String.raw`\text{(Erste binomische Formel)}`}
+                            />
+                        </g>
+                    </Mafs>
+                </Fragment>
+            </div>
         </Slide>
     );
 }
