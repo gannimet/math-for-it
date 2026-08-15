@@ -128,6 +128,7 @@ function LinearFunctionsIntro() {
                                 <LaTeX
                                     tex={String.raw`m = \dfrac{\Delta y}{\Delta x} = \dfrac{${deltaY.toFixed(1)}}{${deltaX.toFixed(1)}} = ${(deltaY / deltaX).toFixed(1)}`}
                                     at={[9, -2.3]}
+                                    color={Theme.pink}
                                 />
                             )}
                         </g>
@@ -140,6 +141,9 @@ function LinearFunctionsIntro() {
                             left: 20,
                             color: 'white',
                             fontFamily: 'CMU Serif',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            columnGap: '16px',
                         }}
                     >
                         <span>Anstieg:</span>
