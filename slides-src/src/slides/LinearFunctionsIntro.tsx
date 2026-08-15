@@ -3,10 +3,21 @@ import { Coordinates, LaTeX, Line, Mafs, Polygon, Theme, useMovablePoint } from 
 import { useEffect, useState } from 'react';
 import MathEl from '../common/MathEl';
 
+const TEXT_GAP_HORIZONTAL = 1.4;
+const TEXT_GAP_VERTICAL = 0.6;
+
 function getFunctionEquation(m: number, n: number) {
     const calcSign = n < 0 ? '' : '+';
 
     return String.raw`f(x) = ${m.toFixed(1)} x ${calcSign} ${n.toFixed(1)}`;
+}
+
+function getDeltaXPosition(leftX: number, rightX: number, referenceY: number): [number, number] {
+    return [(rightX + leftX) / 2, referenceY - TEXT_GAP_VERTICAL];
+}
+
+function getDeltaYPosition(bottomY: number, topY: number, referenceX: number): [number, number] {
+    return [referenceX + TEXT_GAP_HORIZONTAL, (topY + bottomY) / 2];
 }
 
 function LinearFunctionsIntro() {
@@ -18,15 +29,31 @@ function LinearFunctionsIntro() {
 
     const triangleAnchor = useMovablePoint([1, 1], {
         constrain: ([x, _]) => {
-            return [x, yIntercept.y];
+            return [Math.round(x * 10) / 10, yIntercept.y];
         },
     });
 
     const [slope, setSlope] = useState(1);
+    const triangleTop = slope * triangleAnchor.x + yIntercept.y;
+    const deltaX = triangleAnchor.x - yIntercept.x;
+    const deltaY = triangleTop - triangleAnchor.y;
+
+    const [deltaXPosition, setDeltaXPosition] = useState<[number, number]>(
+        getDeltaXPosition(yIntercept.x, triangleAnchor.x, triangleAnchor.y),
+    );
+
+    const [deltaYPosition, setDeltaYPosition] = useState<[number, number]>(
+        getDeltaYPosition(triangleAnchor.y, triangleTop, triangleAnchor.x),
+    );
 
     useEffect(() => {
         triangleAnchor.setPoint([triangleAnchor.x, yIntercept.y]);
     }, [yIntercept.y]);
+
+    useEffect(() => {
+        setDeltaXPosition(getDeltaXPosition(yIntercept.x, triangleAnchor.x, triangleAnchor.y));
+        setDeltaYPosition(getDeltaYPosition(triangleAnchor.y, triangleTop, triangleAnchor.x));
+    }, [triangleAnchor.x, triangleAnchor.y]);
 
     return (
         <Slide>
@@ -47,7 +74,7 @@ function LinearFunctionsIntro() {
                         <g style={{ fontSize: '0.7em' }}>
                             <LaTeX
                                 tex={getFunctionEquation(slope, yIntercept.y)}
-                                at={[5.5, 2]}
+                                at={[9, 2.5]}
                                 color={Theme.green}
                             ></LaTeX>
                         </g>
@@ -62,19 +89,32 @@ function LinearFunctionsIntro() {
                             />
                             <Line.Segment
                                 point1={triangleAnchor.point}
-                                point2={[triangleAnchor.x, slope * triangleAnchor.x + yIntercept.y]}
+                                point2={[triangleAnchor.x, triangleTop]}
                                 color={Theme.pink}
                             />
                             <Polygon
                                 points={[
                                     yIntercept.point,
                                     triangleAnchor.point,
-                                    [triangleAnchor.x, slope * triangleAnchor.x + yIntercept.y],
+                                    [triangleAnchor.x, triangleTop],
                                 ]}
                                 color={Theme.pink}
                                 weight={0}
                             />
                             {triangleAnchor.element}
+                        </g>
+
+                        <g className="fragment" style={{ fontSize: '0.7em' }}>
+                            <LaTeX
+                                tex={String.raw`\Delta x = ${deltaX.toFixed(1)}`}
+                                at={deltaXPosition}
+                                color={Theme.pink}
+                            />
+                            <LaTeX
+                                tex={String.raw`\Delta y = ${deltaY.toFixed(1)}`}
+                                at={deltaYPosition}
+                                color={Theme.pink}
+                            />
                         </g>
                     </Mafs>
 
