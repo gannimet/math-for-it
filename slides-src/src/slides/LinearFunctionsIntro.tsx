@@ -12,12 +12,20 @@ function getFunctionEquation(m: number, n: number) {
     return String.raw`f(x) = ${m.toFixed(1)} x ${calcSign} ${n.toFixed(1)}`;
 }
 
-function getDeltaXPosition(leftX: number, rightX: number, referenceY: number): [number, number] {
-    return [(rightX + leftX) / 2, referenceY - TEXT_GAP_VERTICAL];
+function getDeltaXPosition(
+    yInterceptX: number,
+    triangleAnchorX: number,
+    referenceY: number,
+): [number, number] {
+    return [(triangleAnchorX + yInterceptX) / 2, referenceY - TEXT_GAP_VERTICAL];
 }
 
-function getDeltaYPosition(bottomY: number, topY: number, referenceX: number): [number, number] {
-    return [referenceX + TEXT_GAP_HORIZONTAL, (topY + bottomY) / 2];
+function getDeltaYPosition(
+    triangleAnchorY: number,
+    triangleTop: number,
+    referenceX: number,
+): [number, number] {
+    return [referenceX + TEXT_GAP_HORIZONTAL, (triangleTop + triangleAnchorY) / 2];
 }
 
 function LinearFunctionsIntro() {
@@ -53,7 +61,7 @@ function LinearFunctionsIntro() {
     useEffect(() => {
         setDeltaXPosition(getDeltaXPosition(yIntercept.x, triangleAnchor.x, triangleAnchor.y));
         setDeltaYPosition(getDeltaYPosition(triangleAnchor.y, triangleTop, triangleAnchor.x));
-    }, [triangleAnchor.x, triangleAnchor.y]);
+    }, [triangleAnchor.x, triangleAnchor.y, triangleTop]);
 
     return (
         <Slide>
@@ -115,6 +123,13 @@ function LinearFunctionsIntro() {
                                 at={deltaYPosition}
                                 color={Theme.pink}
                             />
+
+                            {!Number.isNaN(deltaY / deltaX) && (
+                                <LaTeX
+                                    tex={String.raw`m = \dfrac{\Delta y}{\Delta x} = \dfrac{${deltaY.toFixed(1)}}{${deltaX.toFixed(1)}} = ${(deltaY / deltaX).toFixed(1)}`}
+                                    at={[9, -2.3]}
+                                />
+                            )}
                         </g>
                     </Mafs>
 
