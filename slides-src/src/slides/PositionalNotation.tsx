@@ -9,9 +9,9 @@ export default function PositionalNotation() {
         <Slide>
             <h2>Stellenwertsysteme</h2>
 
-            <div className="positional-examples">
+            <div className="positional-examples r-stretch">
                 <div className="example-1">
-                    <MathEl tex={String.raw`257_{10}`} />{' '}
+                    <MathEl tex={String.raw`\textcolor{${digitColor}}{257}_{10}`} />{' '}
                     <span className="fragment">
                         <MathEl
                             tex={String.raw`
@@ -26,7 +26,7 @@ export default function PositionalNotation() {
 
                 <Fragment>
                     <div className="example-1">
-                        <MathEl tex={String.raw`101_2`} />{' '}
+                        <MathEl tex={String.raw`\textcolor{${digitColor}}{101}_2`} />{' '}
                         <span className="fragment">
                             <MathEl
                                 tex={String.raw`

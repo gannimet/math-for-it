@@ -1,0 +1,16 @@
+.number-sets {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 12px;
+
+    .set {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        .set-examples {
+            margin-top: 1em;
+        }
+    }
+}

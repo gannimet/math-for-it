@@ -10,6 +10,7 @@ import CoordinateSystems from './slides/CoordinateSystems';
 import LinearFunctionsIntro from './slides/LinearFunctionsIntro';
 import NumberLine from './slides/NumberLine';
 import PositionalNotation from './slides/PositionalNotation';
+import TermsMiscellaneous from './slides/TermsMiscellaneous';
 
 function App() {
     return (
@@ -35,14 +36,15 @@ function App() {
             plugins={[RevealMath.KaTeX]}
         >
             <Slide>
-                <h2>Mathematik als Fundament</h2>
-                <h3>Grundlagen für IT und Programmierung</h3>
+                <h2 className="r-fit-text">Mathematik als Fundament</h2>
+                <h3 className="r-fit-text">Grundlagen für IT und Programmierung</h3>
             </Slide>
 
             <NumberLine />
             <PositionalNotation />
-            <BinomialPerspective />
             <CoordinateSystems />
+            <BinomialPerspective />
+            <TermsMiscellaneous />
             <LinearFunctionsIntro />
 
             <Slide>
