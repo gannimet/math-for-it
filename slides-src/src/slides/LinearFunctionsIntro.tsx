@@ -76,14 +76,14 @@ function LinearFunctionsIntro() {
                         <Line.PointSlope
                             point={yIntercept.point}
                             slope={slope}
-                            color={Theme.green}
+                            color={Theme.blue}
                         />
 
                         <g style={{ fontSize: '0.7em' }}>
                             <LaTeX
                                 tex={getFunctionEquation(slope, yIntercept.y)}
                                 at={[9, 2.5]}
-                                color={Theme.green}
+                                color={Theme.blue}
                             ></LaTeX>
                         </g>
 
