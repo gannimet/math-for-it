@@ -63,7 +63,7 @@ export default function TrigonometryIntro() {
                 <div className="r-stretch" style={{ position: 'relative' }}>
                     <Mafs
                         height={700}
-                        viewBox={{ x: [-3.5, 3], y: [-1, 1] }}
+                        viewBox={{ x: [-2.5, 2.5], y: [-1.5, 1.5] }}
                         pan={false}
                         zoom={false}
                     >
@@ -128,15 +128,17 @@ export default function TrigonometryIntro() {
                                 />
                             </g>
 
-                            <g style={{ fontSize: '0.7em' }} data-id="trig-sin-cos-formula">
+                            <g style={{ fontSize: '0.7em' }} data-id="trig-sin-formula">
                                 <LaTeX
                                     tex={String.raw`\sin(\alpha) = \dfrac{\text{GK}}{\textcolor{#ee00ab}{\text{HY}}} = \text{GK} \approx ${Math.sin(angle).toFixed(2)}`}
-                                    at={[-2.5, 0.4]}
+                                    at={[-2.7, 0.4]}
                                     color={Theme.green}
                                 />
+                            </g>
+                            <g style={{ fontSize: '0.7em' }} data-id="trig-cos-formula">
                                 <LaTeX
                                     tex={String.raw`\cos(\alpha) = \dfrac{\text{AK}}{\textcolor{#ee00ab}{\text{HY}}} = \text{AK} \approx ${Math.cos(angle).toFixed(2)}`}
-                                    at={[-2.5, -0.6]}
+                                    at={[-2.7, -0.6]}
                                     color={Theme.blue}
                                 />
                             </g>
@@ -162,12 +164,12 @@ export default function TrigonometryIntro() {
                             <g style={{ fontSize: '0.7em' }} data-id="trig-tan-formula">
                                 <LaTeX
                                     tex={String.raw`\tan(\alpha) = \dfrac{\textcolor{#15e272}{\text{GK}}}{\textcolor{#58a6ff}{\text{AK}}} =`}
-                                    at={[2, 0.5]}
+                                    at={[2.3, 0.5]}
                                     color={Theme.yellow}
                                 />
                                 <LaTeX
                                     tex={String.raw`= \dfrac{\textcolor{#15e272}{\sin(\alpha)}}{\textcolor{#58a6ff}{\cos(\alpha)}} \approx ${Math.tan(angle).toFixed(2)}`}
-                                    at={[2, -0.5]}
+                                    at={[2.3, -0.5]}
                                     color={Theme.yellow}
                                 />
                             </g>
@@ -220,6 +222,14 @@ export default function TrigonometryIntro() {
                                 />
                             </g>
 
+                            <g data-id="trig-angle-value">
+                                <LaTeX
+                                    tex={String.raw`\alpha = ${((180 * angle) / Math.PI).toFixed(1)}^{\circ}`}
+                                    at={[-2, 1.7]}
+                                    color={Theme.pink}
+                                />
+                            </g>
+
                             <g style={{ fontSize: '0.5em' }} data-id="trig-alpha">
                                 <LaTeX
                                     tex={String.raw`\alpha`}
@@ -245,6 +255,14 @@ export default function TrigonometryIntro() {
                                 />
                             </g>
 
+                            <g style={{ fontSize: '0.7em' }} data-id="trig-sin-formula">
+                                <LaTeX
+                                    tex={String.raw`\sin(\alpha) = \dfrac{\text{GK}}{\textcolor{#ee00ab}{\text{HY}}} = \text{GK} \approx ${Math.sin(angle).toFixed(2)}`}
+                                    at={[3, 1.7]}
+                                    color={Theme.green}
+                                />
+                            </g>
+
                             <g data-id="trig-sin-graph">
                                 <Plot.OfX
                                     y={(x) => Math.sin(x)}
@@ -253,18 +271,21 @@ export default function TrigonometryIntro() {
                                     weight={4}
                                 />
                                 <Plot.OfX
+                                    y={(x) => Math.sin(x)}
+                                    color={Theme.green}
+                                    domain={[-5, 0]}
+                                    weight={0.8}
+                                />
+                            </g>
+
+                            <g className="fragment" data-id="trig-cos-graph">
+                                <Plot.OfX
                                     y={(x) => Math.cos(x)}
                                     color={Theme.blue}
                                     domain={[0, 10]}
                                     weight={4}
                                 />
 
-                                <Plot.OfX
-                                    y={(x) => Math.sin(x)}
-                                    color={Theme.green}
-                                    domain={[-5, 0]}
-                                    weight={0.8}
-                                />
                                 <Plot.OfX
                                     y={(x) => Math.cos(x)}
                                     color={Theme.blue}
@@ -277,17 +298,21 @@ export default function TrigonometryIntro() {
                                 <Point x={trigAnchor.x - 2} y={trigAnchor.y} color={Theme.pink} />
                             </g>
 
-                            <Point
-                                x={time % (2 * Math.PI)}
-                                y={Math.sin(time)}
-                                color={Theme.green}
-                            />
-                            <Line.Segment
-                                point1={[trigAnchor.x - 2, trigAnchor.y]}
-                                point2={[time % (2 * Math.PI), Math.sin(time)]}
-                                style="dashed"
-                                color={Theme.green}
-                            />
+                            {isSineAnimationRunning && (
+                                <>
+                                    <Point
+                                        x={time % (2 * Math.PI)}
+                                        y={Math.sin(time)}
+                                        color={Theme.green}
+                                    />
+                                    <Line.Segment
+                                        point1={[trigAnchor.x - 2, trigAnchor.y]}
+                                        point2={[time % (2 * Math.PI), Math.sin(time)]}
+                                        style="dashed"
+                                        color={Theme.green}
+                                    />
+                                </>
+                            )}
                         </Mafs>
 
                         <button
