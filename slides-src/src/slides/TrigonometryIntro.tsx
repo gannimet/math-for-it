@@ -15,6 +15,7 @@ import { useEffect, useState } from 'react';
 
 const INITIAL_ANGLE = Math.PI / 6;
 const ANGLE_ARC_DIST = 0.5;
+const BBOX_EPSILON = 0.001;
 
 export default function TrigonometryIntro() {
     const trigAnchor = useMovablePoint([Math.cos(INITIAL_ANGLE), Math.sin(INITIAL_ANGLE)], {
@@ -38,7 +39,7 @@ export default function TrigonometryIntro() {
             <Slide data-auto-animate>
                 <h2>Trigonometrie</h2>
 
-                <div className="r-stretch">
+                <div className="r-stretch" style={{ position: 'relative' }}>
                     <Mafs
                         height={700}
                         viewBox={{ x: [-3.5, 3.2], y: [-1, 1.2] }}
@@ -94,7 +95,7 @@ export default function TrigonometryIntro() {
                         <g className="fragment">
                             <g data-id="trig-sin-line">
                                 <Line.Segment
-                                    point1={[trigAnchor.x, 0]}
+                                    point1={[trigAnchor.x + BBOX_EPSILON, 0]}
                                     point2={trigAnchor.point}
                                     color={Theme.green}
                                     weight={4}
@@ -103,7 +104,7 @@ export default function TrigonometryIntro() {
                             <g data-id="trig-cos-line">
                                 <Line.Segment
                                     point1={[0, 0]}
-                                    point2={[trigAnchor.x, 0]}
+                                    point2={[trigAnchor.x, BBOX_EPSILON]}
                                     color={Theme.blue}
                                     weight={4}
                                 />
@@ -123,22 +124,24 @@ export default function TrigonometryIntro() {
                             </g>
                         </g>
 
-                        <g className="fragment" data-id="trig-tan-formula">
-                            <Line.ThroughPoints point1={[1, -1]} point2={[1, 1]} />
-                            <Line.Segment
-                                point1={[0, 0]}
-                                point2={[1, Math.tan(angle)]}
-                                color={Theme.pink}
-                            />
-                            <Line.Segment
-                                point1={[1, 0]}
-                                point2={[1, Math.tan(angle)]}
-                                color={Theme.yellow}
-                                weight={4}
-                            />
-                            <Point x={1} y={Math.tan(angle)} color={Theme.yellow} />
+                        <g className="fragment">
+                            <g data-id="trig-tan-geometry">
+                                <Line.ThroughPoints point1={[1, -1]} point2={[1, 1]} />
+                                <Line.Segment
+                                    point1={[0, 0]}
+                                    point2={[1, Math.tan(angle)]}
+                                    color={Theme.pink}
+                                />
+                                <Line.Segment
+                                    point1={[1, 0]}
+                                    point2={[1, Math.tan(angle)]}
+                                    color={Theme.yellow}
+                                    weight={4}
+                                />
+                                <Point x={1} y={Math.tan(angle)} color={Theme.yellow} />
+                            </g>
 
-                            <g className="fragment" style={{ fontSize: '0.7em' }}>
+                            <g style={{ fontSize: '0.7em' }} data-id="trig-tan-formula">
                                 <LaTeX
                                     tex={String.raw`\tan(\alpha) = \dfrac{\textcolor{#15e272}{\text{GK}}}{\textcolor{#58a6ff}{\text{AK}}} =`}
                                     at={[2, 0.5]}
@@ -202,13 +205,9 @@ export default function TrigonometryIntro() {
                             <LaTeX tex={String.raw`\alpha`} at={[-1.65, 0.1]} color={Theme.pink} />
                         </g>
 
-                        <g data-id="trig-anchor-non-movable">
-                            <Point x={trigAnchor.x - 2} y={trigAnchor.y} color={Theme.pink} />
-                        </g>
-
                         <g data-id="trig-sin-line">
                             <Line.Segment
-                                point1={[trigAnchor.x - 2, 0]}
+                                point1={[trigAnchor.x - 2 + BBOX_EPSILON, 0]}
                                 point2={[trigAnchor.x - 2, trigAnchor.y]}
                                 color={Theme.green}
                                 weight={4}
@@ -217,7 +216,7 @@ export default function TrigonometryIntro() {
                         <g data-id="trig-cos-line">
                             <Line.Segment
                                 point1={[-2, 0]}
-                                point2={[trigAnchor.x - 2, 0]}
+                                point2={[trigAnchor.x - 2, BBOX_EPSILON]}
                                 color={Theme.blue}
                                 weight={4}
                             />
@@ -226,6 +225,10 @@ export default function TrigonometryIntro() {
                         <g data-id="trig-sin-graph">
                             <Plot.OfX y={(x) => Math.sin(x)} color={Theme.green} />
                             <Plot.OfX y={(x) => Math.cos(x)} color={Theme.blue} />
+                        </g>
+
+                        <g data-id="trig-anchor-non-movable">
+                            <Point x={trigAnchor.x - 2} y={trigAnchor.y} color={Theme.pink} />
                         </g>
                     </Mafs>
                 </div>
