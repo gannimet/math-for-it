@@ -34,104 +34,202 @@ export default function TrigonometryIntro() {
     }, [trigAnchor.x, trigAnchor.y]);
 
     return (
-        <Slide>
-            <h2>Trigonometrie</h2>
+        <>
+            <Slide data-auto-animate>
+                <h2>Trigonometrie</h2>
 
-            <div className="r-stretch">
-                <Mafs
-                    height={700}
-                    viewBox={{ x: [-3.5, 3.2], y: [-1, 1.2] }}
-                    pan={false}
-                    zoom={true}
-                >
-                    <Coordinates.Cartesian xAxis={{ labels: false }} yAxis={{ labels: false }} />
+                <div className="r-stretch">
+                    <Mafs
+                        height={700}
+                        viewBox={{ x: [-3.5, 3.2], y: [-1, 1.2] }}
+                        pan={false}
+                        zoom={false}
+                    >
+                        <g data-id="trig-coords">
+                            <Coordinates.Cartesian
+                                xAxis={{ labels: false }}
+                                yAxis={{ labels: false }}
+                            />
+                        </g>
 
-                    <Circle center={[0, 0]} radius={1} weight={3} />
-                    <Line.Segment
-                        point1={[0, 0]}
-                        point2={trigAnchor.point}
-                        color={Theme.pink}
-                        weight={3}
-                    />
+                        <g data-id="trig-circle">
+                            <Circle center={[0, 0]} radius={1} weight={3} />
+                        </g>
+                        <g data-id="trig-anchor-radius">
+                            <Line.Segment
+                                point1={[0, 0]}
+                                point2={trigAnchor.point}
+                                color={Theme.pink}
+                                weight={3}
+                            />
+                        </g>
 
-                    <Plot.Parametric
-                        domain={[0, angle]}
-                        xy={(t) => [Math.cos(t) * ANGLE_ARC_DIST, Math.sin(t) * ANGLE_ARC_DIST]}
-                        color={Theme.pink}
-                        weight={3}
-                    />
+                        <g data-id="trig-angle-arc">
+                            <Plot.Parametric
+                                domain={[0, angle]}
+                                xy={(t) => [
+                                    Math.cos(t) * ANGLE_ARC_DIST,
+                                    Math.sin(t) * ANGLE_ARC_DIST,
+                                ]}
+                                color={Theme.pink}
+                                weight={3}
+                            />
+                        </g>
 
-                    <LaTeX tex={String.raw`r=1`} at={[0, 1.3]} />
-                    <LaTeX
-                        tex={String.raw`\alpha = ${((180 * angle) / Math.PI).toFixed(1)}^{\circ}`}
-                        at={[-2.5, 1.3]}
-                        color={Theme.pink}
-                    />
-
-                    <g style={{ fontSize: '0.6em' }}>
-                        <LaTeX tex={String.raw`\alpha`} at={[0.35, 0.1]} color={Theme.pink} />
-                    </g>
-
-                    <g className="fragment">
-                        <Line.Segment
-                            point1={[trigAnchor.x, 0]}
-                            point2={trigAnchor.point}
-                            color={Theme.green}
-                            weight={4}
-                        />
-                        <Line.Segment
-                            point1={[0, 0]}
-                            point2={[trigAnchor.x, 0]}
-                            color={Theme.blue}
-                            weight={4}
-                        />
-
-                        <g style={{ fontSize: '0.7em' }}>
+                        <g data-id="trig-radius-hint">
+                            <LaTeX tex={String.raw`r=1`} at={[0, 1.3]} />
+                        </g>
+                        <g data-id="trig-angle-value">
                             <LaTeX
-                                tex={String.raw`\sin(\alpha) = \dfrac{\text{GK}}{\textcolor{#ee00ab}{\text{HY}}} = \text{GK} = ${Math.sin(angle).toFixed(2)}`}
-                                at={[-2.5, 0.4]}
+                                tex={String.raw`\alpha = ${((180 * angle) / Math.PI).toFixed(1)}^{\circ}`}
+                                at={[-2.5, 1.3]}
+                                color={Theme.pink}
+                            />
+                        </g>
+
+                        <g style={{ fontSize: '0.6em' }} data-id="trig-alpha">
+                            <LaTeX tex={String.raw`\alpha`} at={[0.35, 0.1]} color={Theme.pink} />
+                        </g>
+
+                        <g className="fragment">
+                            <g data-id="trig-sin-line">
+                                <Line.Segment
+                                    point1={[trigAnchor.x, 0]}
+                                    point2={trigAnchor.point}
+                                    color={Theme.green}
+                                    weight={4}
+                                />
+                            </g>
+                            <g data-id="trig-cos-line">
+                                <Line.Segment
+                                    point1={[0, 0]}
+                                    point2={[trigAnchor.x, 0]}
+                                    color={Theme.blue}
+                                    weight={4}
+                                />
+                            </g>
+
+                            <g style={{ fontSize: '0.7em' }} data-id="trig-sin-cos-formula">
+                                <LaTeX
+                                    tex={String.raw`\sin(\alpha) = \dfrac{\text{GK}}{\textcolor{#ee00ab}{\text{HY}}} = \text{GK} \approx ${Math.sin(angle).toFixed(2)}`}
+                                    at={[-2.5, 0.4]}
+                                    color={Theme.green}
+                                />
+                                <LaTeX
+                                    tex={String.raw`\cos(\alpha) = \dfrac{\text{AK}}{\textcolor{#ee00ab}{\text{HY}}} = \text{AK} \approx ${Math.cos(angle).toFixed(2)}`}
+                                    at={[-2.5, -0.6]}
+                                    color={Theme.blue}
+                                />
+                            </g>
+                        </g>
+
+                        <g className="fragment" data-id="trig-tan-formula">
+                            <Line.ThroughPoints point1={[1, -1]} point2={[1, 1]} />
+                            <Line.Segment
+                                point1={[0, 0]}
+                                point2={[1, Math.tan(angle)]}
+                                color={Theme.pink}
+                            />
+                            <Line.Segment
+                                point1={[1, 0]}
+                                point2={[1, Math.tan(angle)]}
+                                color={Theme.yellow}
+                                weight={4}
+                            />
+                            <Point x={1} y={Math.tan(angle)} color={Theme.yellow} />
+
+                            <g className="fragment" style={{ fontSize: '0.7em' }}>
+                                <LaTeX
+                                    tex={String.raw`\tan(\alpha) = \dfrac{\textcolor{#15e272}{\text{GK}}}{\textcolor{#58a6ff}{\text{AK}}} =`}
+                                    at={[2, 0.5]}
+                                    color={Theme.yellow}
+                                />
+                                <LaTeX
+                                    tex={String.raw`= \dfrac{\textcolor{#15e272}{\sin(\alpha)}}{\textcolor{#58a6ff}{\cos(\alpha)}} \approx ${Math.tan(angle).toFixed(2)}`}
+                                    at={[2, -0.5]}
+                                    color={Theme.yellow}
+                                />
+                            </g>
+                        </g>
+
+                        <g data-id="trig-anchor-point">{trigAnchor.element}</g>
+                    </Mafs>
+                </div>
+            </Slide>
+
+            <Slide data-auto-animate>
+                <h2>Trigonometrie</h2>
+
+                <div className="r-stretch">
+                    <Mafs
+                        height={700}
+                        viewBox={{ x: [-3.5, 3.2], y: [-1, 1.2] }}
+                        pan={false}
+                        zoom={false}
+                    >
+                        <g data-id="trig-coords">
+                            <Coordinates.Cartesian
+                                xAxis={{ labels: false }}
+                                yAxis={{ labels: false }}
+                            />
+                        </g>
+
+                        <g data-id="trig-circle">
+                            <Circle center={[-2, 0]} radius={1} weight={3} />
+                        </g>
+                        <g data-id="trig-anchor-radius">
+                            <Line.Segment
+                                point1={[-2, 0]}
+                                point2={[trigAnchor.x - 2, trigAnchor.y]}
+                                color={Theme.pink}
+                                weight={3}
+                            />
+                        </g>
+
+                        <g data-id="trig-angle-arc">
+                            <Plot.Parametric
+                                domain={[0, angle]}
+                                xy={(t) => [
+                                    Math.cos(t) * ANGLE_ARC_DIST - 2,
+                                    Math.sin(t) * ANGLE_ARC_DIST,
+                                ]}
+                                color={Theme.pink}
+                                weight={3}
+                            />
+                        </g>
+
+                        <g style={{ fontSize: '0.6em' }} data-id="trig-alpha">
+                            <LaTeX tex={String.raw`\alpha`} at={[-1.65, 0.1]} color={Theme.pink} />
+                        </g>
+
+                        <g data-id="trig-anchor-non-movable">
+                            <Point x={trigAnchor.x - 2} y={trigAnchor.y} color={Theme.pink} />
+                        </g>
+
+                        <g data-id="trig-sin-line">
+                            <Line.Segment
+                                point1={[trigAnchor.x - 2, 0]}
+                                point2={[trigAnchor.x - 2, trigAnchor.y]}
                                 color={Theme.green}
+                                weight={4}
                             />
-                            <LaTeX
-                                tex={String.raw`\cos(\alpha) = \dfrac{\text{AK}}{\textcolor{#ee00ab}{\text{HY}}} = \text{AK} = ${Math.cos(angle).toFixed(2)}`}
-                                at={[-2.5, -0.6]}
+                        </g>
+                        <g data-id="trig-cos-line">
+                            <Line.Segment
+                                point1={[-2, 0]}
+                                point2={[trigAnchor.x - 2, 0]}
                                 color={Theme.blue}
+                                weight={4}
                             />
                         </g>
-                    </g>
 
-                    <g className="fragment">
-                        <Line.ThroughPoints point1={[1, -1]} point2={[1, 1]} />
-                        <Line.Segment
-                            point1={[0, 0]}
-                            point2={[1, Math.tan(angle)]}
-                            color={Theme.pink}
-                        />
-                        <Line.Segment
-                            point1={[1, 0]}
-                            point2={[1, Math.tan(angle)]}
-                            color={Theme.yellow}
-                            weight={4}
-                        />
-                        <Point x={1} y={Math.tan(angle)} color={Theme.yellow} />
-
-                        <g className="fragment" style={{ fontSize: '0.7em' }}>
-                            <LaTeX
-                                tex={String.raw`\tan(\alpha) = \dfrac{\textcolor{#15e272}{\text{GK}}}{\textcolor{#58a6ff}{\text{AK}}} =`}
-                                at={[2, 0.5]}
-                                color={Theme.yellow}
-                            />
-                            <LaTeX
-                                tex={String.raw`= \dfrac{\textcolor{#15e272}{\sin(\alpha)}}{\textcolor{#58a6ff}{\cos(\alpha)}} = ${Math.tan(angle).toFixed(2)}`}
-                                at={[2, -0.5]}
-                                color={Theme.yellow}
-                            />
+                        <g data-id="trig-sin-graph">
+                            <Plot.OfX y={(x) => Math.sin(x)} color={Theme.green} />
+                            <Plot.OfX y={(x) => Math.cos(x)} color={Theme.blue} />
                         </g>
-                    </g>
-
-                    {trigAnchor.element}
-                </Mafs>
-            </div>
-        </Slide>
+                    </Mafs>
+                </div>
+            </Slide>
+        </>
     );
 }
