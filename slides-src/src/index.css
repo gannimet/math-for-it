@@ -50,3 +50,19 @@ body {
         }
     }
 }
+
+.mafs-button {
+    background-color: rgb(64, 112, 113);
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #eee;
+    font-family: var(--r-main-font);
+    font-size: 32px;
+    cursor: pointer;
+    transition: background-color 0.2s ease !important;
+
+    &:hover {
+        background-color: rgb(77, 135, 136);
+    }
+}

@@ -186,7 +186,16 @@ export default function TrigonometryIntro() {
                         >
                             <g data-id="trig-coords">
                                 <Coordinates.Cartesian
-                                    xAxis={{ labels: (l) => (l > 0 ? l : '') }}
+                                    xAxis={{
+                                        labels: (l) => {
+                                            if (l <= 0) {
+                                                return '';
+                                            }
+
+                                            return `${((180 * l) / Math.PI).toFixed(0)}°`;
+                                        },
+                                        lines: Math.PI / 2,
+                                    }}
                                     yAxis={{ labels: (l) => (Math.abs(l) === 1 ? l : '') }}
                                 />
                             </g>
@@ -307,10 +316,10 @@ export default function TrigonometryIntro() {
                         <button
                             style={{
                                 position: 'absolute',
-                                bottom: '20px',
-                                left: '20px',
-                                fontSize: '30px',
+                                bottom: '24px',
+                                left: '24px',
                             }}
+                            className="mafs-button"
                             onClick={() => toggleSineAnimation()}
                         >
                             {isSineAnimationRunning ? 'Stop' : 'Start'} animation

@@ -13,6 +13,7 @@ import NumberLine from './slides/NumberLine';
 import PositionalNotation from './slides/PositionalNotation';
 import TermsMiscellaneous from './slides/TermsMiscellaneous';
 import TrigonometryIntro from './slides/TrigonometryIntro';
+import TrigonometryRadians from './slides/TrigonometryRadians';
 
 function App() {
     return (
@@ -53,6 +54,7 @@ function App() {
             <LinearFunctionsTasks2 />
 
             <TrigonometryIntro />
+            <TrigonometryRadians />
         </Deck>
     );
 }
