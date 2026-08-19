@@ -12,7 +12,7 @@ import {
     useStopwatch,
     vec,
 } from 'mafs';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const INITIAL_ANGLE = Math.PI / 6;
 const ANGLE_ARC_DIST = 0.5;
@@ -22,20 +22,11 @@ export default function TrigonometryIntro() {
     const trigAnchor = useMovablePoint([Math.cos(INITIAL_ANGLE), Math.sin(INITIAL_ANGLE)], {
         constrain: (point) => vec.withMag(point, 1),
     });
-
-    const [angle, setAngle] = useState(INITIAL_ANGLE);
-
-    useEffect(() => {
-        let newAngle = Math.atan2(trigAnchor.y, trigAnchor.x);
-
-        if (newAngle < 0) {
-            newAngle = 2 * Math.PI + newAngle;
-        }
-
-        setAngle(newAngle);
-    }, [trigAnchor.x, trigAnchor.y]);
+    const rawAngle = Math.atan2(trigAnchor.y, trigAnchor.x);
+    const angle = rawAngle < 0 ? 2 * Math.PI + rawAngle : rawAngle;
 
     const { time, start, stop } = useStopwatch();
+    const lastStopwatchTime = useRef<number>(0);
     const [isSineAnimationRunning, setIsSineAnimationRunning] = useState(false);
 
     const toggleSineAnimation = () => {
@@ -49,10 +40,12 @@ export default function TrigonometryIntro() {
     };
 
     useEffect(() => {
-        const newAngle = time % (2 * Math.PI);
+        const stopwatchDiffTime = time - lastStopwatchTime.current;
+        const diffAngle = stopwatchDiffTime / 2;
+        const newTotalAngle = (angle + diffAngle) % (2 * Math.PI);
 
-        setAngle(newAngle);
-        trigAnchor.setPoint([Math.cos(newAngle), Math.sin(newAngle)]);
+        trigAnchor.setPoint([Math.cos(newTotalAngle), Math.sin(newTotalAngle)]);
+        lastStopwatchTime.current = time;
     }, [time]);
 
     return (
@@ -300,14 +293,10 @@ export default function TrigonometryIntro() {
 
                             {isSineAnimationRunning && (
                                 <>
-                                    <Point
-                                        x={time % (2 * Math.PI)}
-                                        y={Math.sin(time)}
-                                        color={Theme.green}
-                                    />
+                                    <Point x={angle} y={Math.sin(angle)} color={Theme.green} />
                                     <Line.Segment
                                         point1={[trigAnchor.x - 2, trigAnchor.y]}
-                                        point2={[time % (2 * Math.PI), Math.sin(time)]}
+                                        point2={[angle, Math.sin(angle)]}
                                         style="dashed"
                                         color={Theme.green}
                                     />
@@ -324,7 +313,7 @@ export default function TrigonometryIntro() {
                             }}
                             onClick={() => toggleSineAnimation()}
                         >
-                            {isSineAnimationRunning ? 'Stop' : 'Start'}
+                            {isSineAnimationRunning ? 'Stop' : 'Start'} animation
                         </button>
                     </div>
                 </div>
