@@ -9,6 +9,7 @@ import CoordinateSystems from './slides/CoordinateSystems';
 import LinearFunctionsIntro from './slides/LinearFunctionsIntro';
 import LinearFunctionsTasks1 from './slides/LinearFunctionsTasks1';
 import LinearFunctionsTasks2 from './slides/LinearFunctionsTasks2';
+import MoonTimes from './slides/MoonTimes';
 import NumberLine from './slides/NumberLine';
 import PositionalNotation from './slides/PositionalNotation';
 import TermsMiscellaneous from './slides/TermsMiscellaneous';
@@ -54,6 +55,7 @@ function App() {
             <LinearFunctionsTasks2 />
 
             <TrigonometryIntro />
+            <MoonTimes />
             <TrigonometryRadians />
         </Deck>
     );

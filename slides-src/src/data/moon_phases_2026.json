@@ -1,0 +1,2114 @@
+[
+  {
+    "dayIndex": 0,
+    "date": "2026-01-01",
+    "culminationTime": "22:36",
+    "phasePercentage": 96.44
+  },
+  {
+    "dayIndex": 1,
+    "date": "2026-01-02",
+    "culminationTime": "23:43",
+    "phasePercentage": 99.51
+  },
+  {
+    "dayIndex": 3,
+    "date": "2026-01-04",
+    "culminationTime": "00:47",
+    "phasePercentage": 99.42
+  },
+  {
+    "dayIndex": 4,
+    "date": "2026-01-05",
+    "culminationTime": "01:47",
+    "phasePercentage": 96.33
+  },
+  {
+    "dayIndex": 5,
+    "date": "2026-01-06",
+    "culminationTime": "02:40",
+    "phasePercentage": 90.71
+  },
+  {
+    "dayIndex": 6,
+    "date": "2026-01-07",
+    "culminationTime": "03:29",
+    "phasePercentage": 83.16
+  },
+  {
+    "dayIndex": 7,
+    "date": "2026-01-08",
+    "culminationTime": "04:13",
+    "phasePercentage": 74.28
+  },
+  {
+    "dayIndex": 8,
+    "date": "2026-01-09",
+    "culminationTime": "04:55",
+    "phasePercentage": 64.63
+  },
+  {
+    "dayIndex": 9,
+    "date": "2026-01-10",
+    "culminationTime": "05:37",
+    "phasePercentage": 54.65
+  },
+  {
+    "dayIndex": 10,
+    "date": "2026-01-11",
+    "culminationTime": "06:18",
+    "phasePercentage": 44.73
+  },
+  {
+    "dayIndex": 11,
+    "date": "2026-01-12",
+    "culminationTime": "07:01",
+    "phasePercentage": 35.16
+  },
+  {
+    "dayIndex": 12,
+    "date": "2026-01-13",
+    "culminationTime": "07:47",
+    "phasePercentage": 26.23
+  },
+  {
+    "dayIndex": 13,
+    "date": "2026-01-14",
+    "culminationTime": "08:34",
+    "phasePercentage": 18.18
+  },
+  {
+    "dayIndex": 14,
+    "date": "2026-01-15",
+    "culminationTime": "09:25",
+    "phasePercentage": 11.3
+  },
+  {
+    "dayIndex": 15,
+    "date": "2026-01-16",
+    "culminationTime": "10:17",
+    "phasePercentage": 5.84
+  },
+  {
+    "dayIndex": 16,
+    "date": "2026-01-17",
+    "culminationTime": "11:10",
+    "phasePercentage": 2.08
+  },
+  {
+    "dayIndex": 17,
+    "date": "2026-01-18",
+    "culminationTime": "12:01",
+    "phasePercentage": 0.24
+  },
+  {
+    "dayIndex": 18,
+    "date": "2026-01-19",
+    "culminationTime": "12:51",
+    "phasePercentage": 0.51
+  },
+  {
+    "dayIndex": 19,
+    "date": "2026-01-20",
+    "culminationTime": "13:39",
+    "phasePercentage": 2.99
+  },
+  {
+    "dayIndex": 20,
+    "date": "2026-01-21",
+    "culminationTime": "14:25",
+    "phasePercentage": 7.66
+  },
+  {
+    "dayIndex": 21,
+    "date": "2026-01-22",
+    "culminationTime": "15:10",
+    "phasePercentage": 14.42
+  },
+  {
+    "dayIndex": 22,
+    "date": "2026-01-23",
+    "culminationTime": "15:54",
+    "phasePercentage": 23.03
+  },
+  {
+    "dayIndex": 23,
+    "date": "2026-01-24",
+    "culminationTime": "16:40",
+    "phasePercentage": 33.16
+  },
+  {
+    "dayIndex": 24,
+    "date": "2026-01-25",
+    "culminationTime": "17:28",
+    "phasePercentage": 44.35
+  },
+  {
+    "dayIndex": 25,
+    "date": "2026-01-26",
+    "culminationTime": "18:20",
+    "phasePercentage": 56.06
+  },
+  {
+    "dayIndex": 26,
+    "date": "2026-01-27",
+    "culminationTime": "19:18",
+    "phasePercentage": 67.64
+  },
+  {
+    "dayIndex": 27,
+    "date": "2026-01-28",
+    "culminationTime": "20:19",
+    "phasePercentage": 78.37
+  },
+  {
+    "dayIndex": 28,
+    "date": "2026-01-29",
+    "culminationTime": "21:24",
+    "phasePercentage": 87.52
+  },
+  {
+    "dayIndex": 29,
+    "date": "2026-01-30",
+    "culminationTime": "22:28",
+    "phasePercentage": 94.42
+  },
+  {
+    "dayIndex": 30,
+    "date": "2026-01-31",
+    "culminationTime": "23:29",
+    "phasePercentage": 98.63
+  },
+  {
+    "dayIndex": 32,
+    "date": "2026-02-02",
+    "culminationTime": "00:25",
+    "phasePercentage": 99.96
+  },
+  {
+    "dayIndex": 33,
+    "date": "2026-02-03",
+    "culminationTime": "01:16",
+    "phasePercentage": 98.5
+  },
+  {
+    "dayIndex": 34,
+    "date": "2026-02-04",
+    "culminationTime": "02:03",
+    "phasePercentage": 94.56
+  },
+  {
+    "dayIndex": 35,
+    "date": "2026-02-05",
+    "culminationTime": "02:47",
+    "phasePercentage": 88.58
+  },
+  {
+    "dayIndex": 36,
+    "date": "2026-02-06",
+    "culminationTime": "03:30",
+    "phasePercentage": 81.03
+  },
+  {
+    "dayIndex": 37,
+    "date": "2026-02-07",
+    "culminationTime": "04:12",
+    "phasePercentage": 72.37
+  },
+  {
+    "dayIndex": 38,
+    "date": "2026-02-08",
+    "culminationTime": "04:55",
+    "phasePercentage": 63.01
+  },
+  {
+    "dayIndex": 39,
+    "date": "2026-02-09",
+    "culminationTime": "05:40",
+    "phasePercentage": 53.31
+  },
+  {
+    "dayIndex": 40,
+    "date": "2026-02-10",
+    "culminationTime": "06:27",
+    "phasePercentage": 43.56
+  },
+  {
+    "dayIndex": 41,
+    "date": "2026-02-11",
+    "culminationTime": "07:16",
+    "phasePercentage": 34.06
+  },
+  {
+    "dayIndex": 42,
+    "date": "2026-02-12",
+    "culminationTime": "08:08",
+    "phasePercentage": 25.11
+  },
+  {
+    "dayIndex": 43,
+    "date": "2026-02-13",
+    "culminationTime": "09:00",
+    "phasePercentage": 17.01
+  },
+  {
+    "dayIndex": 44,
+    "date": "2026-02-14",
+    "culminationTime": "09:53",
+    "phasePercentage": 10.11
+  },
+  {
+    "dayIndex": 45,
+    "date": "2026-02-15",
+    "culminationTime": "10:44",
+    "phasePercentage": 4.74
+  },
+  {
+    "dayIndex": 46,
+    "date": "2026-02-16",
+    "culminationTime": "11:33",
+    "phasePercentage": 1.28
+  },
+  {
+    "dayIndex": 47,
+    "date": "2026-02-17",
+    "culminationTime": "12:20",
+    "phasePercentage": 0.01
+  },
+  {
+    "dayIndex": 48,
+    "date": "2026-02-18",
+    "culminationTime": "13:06",
+    "phasePercentage": 1.16
+  },
+  {
+    "dayIndex": 49,
+    "date": "2026-02-19",
+    "culminationTime": "13:51",
+    "phasePercentage": 4.82
+  },
+  {
+    "dayIndex": 50,
+    "date": "2026-02-20",
+    "culminationTime": "14:37",
+    "phasePercentage": 10.91
+  },
+  {
+    "dayIndex": 51,
+    "date": "2026-02-21",
+    "culminationTime": "15:26",
+    "phasePercentage": 19.18
+  },
+  {
+    "dayIndex": 52,
+    "date": "2026-02-22",
+    "culminationTime": "16:17",
+    "phasePercentage": 29.23
+  },
+  {
+    "dayIndex": 53,
+    "date": "2026-02-23",
+    "culminationTime": "17:12",
+    "phasePercentage": 40.52
+  },
+  {
+    "dayIndex": 54,
+    "date": "2026-02-24",
+    "culminationTime": "18:12",
+    "phasePercentage": 52.39
+  },
+  {
+    "dayIndex": 55,
+    "date": "2026-02-25",
+    "culminationTime": "19:14",
+    "phasePercentage": 64.16
+  },
+  {
+    "dayIndex": 56,
+    "date": "2026-02-26",
+    "culminationTime": "20:17",
+    "phasePercentage": 75.1
+  },
+  {
+    "dayIndex": 57,
+    "date": "2026-02-27",
+    "culminationTime": "21:17",
+    "phasePercentage": 84.57
+  },
+  {
+    "dayIndex": 58,
+    "date": "2026-02-28",
+    "culminationTime": "22:14",
+    "phasePercentage": 92.03
+  },
+  {
+    "dayIndex": 59,
+    "date": "2026-03-01",
+    "culminationTime": "23:06",
+    "phasePercentage": 97.12
+  },
+  {
+    "dayIndex": 60,
+    "date": "2026-03-02",
+    "culminationTime": "23:54",
+    "phasePercentage": 99.67
+  },
+  {
+    "dayIndex": 62,
+    "date": "2026-03-04",
+    "culminationTime": "00:39",
+    "phasePercentage": 99.71
+  },
+  {
+    "dayIndex": 63,
+    "date": "2026-03-05",
+    "culminationTime": "01:22",
+    "phasePercentage": 97.4
+  },
+  {
+    "dayIndex": 64,
+    "date": "2026-03-06",
+    "culminationTime": "02:05",
+    "phasePercentage": 93.02
+  },
+  {
+    "dayIndex": 65,
+    "date": "2026-03-07",
+    "culminationTime": "02:48",
+    "phasePercentage": 86.91
+  },
+  {
+    "dayIndex": 66,
+    "date": "2026-03-08",
+    "culminationTime": "03:33",
+    "phasePercentage": 79.42
+  },
+  {
+    "dayIndex": 67,
+    "date": "2026-03-09",
+    "culminationTime": "04:19",
+    "phasePercentage": 70.9
+  },
+  {
+    "dayIndex": 68,
+    "date": "2026-03-10",
+    "culminationTime": "05:08",
+    "phasePercentage": 61.65
+  },
+  {
+    "dayIndex": 69,
+    "date": "2026-03-11",
+    "culminationTime": "05:58",
+    "phasePercentage": 51.97
+  },
+  {
+    "dayIndex": 70,
+    "date": "2026-03-12",
+    "culminationTime": "06:50",
+    "phasePercentage": 42.17
+  },
+  {
+    "dayIndex": 71,
+    "date": "2026-03-13",
+    "culminationTime": "07:42",
+    "phasePercentage": 32.54
+  },
+  {
+    "dayIndex": 72,
+    "date": "2026-03-14",
+    "culminationTime": "08:33",
+    "phasePercentage": 23.43
+  },
+  {
+    "dayIndex": 73,
+    "date": "2026-03-15",
+    "culminationTime": "09:23",
+    "phasePercentage": 15.23
+  },
+  {
+    "dayIndex": 74,
+    "date": "2026-03-16",
+    "culminationTime": "10:11",
+    "phasePercentage": 8.36
+  },
+  {
+    "dayIndex": 75,
+    "date": "2026-03-17",
+    "culminationTime": "10:57",
+    "phasePercentage": 3.3
+  },
+  {
+    "dayIndex": 76,
+    "date": "2026-03-18",
+    "culminationTime": "11:43",
+    "phasePercentage": 0.48
+  },
+  {
+    "dayIndex": 77,
+    "date": "2026-03-19",
+    "culminationTime": "12:30",
+    "phasePercentage": 0.27
+  },
+  {
+    "dayIndex": 78,
+    "date": "2026-03-20",
+    "culminationTime": "13:19",
+    "phasePercentage": 2.86
+  },
+  {
+    "dayIndex": 79,
+    "date": "2026-03-21",
+    "culminationTime": "14:10",
+    "phasePercentage": 8.24
+  },
+  {
+    "dayIndex": 80,
+    "date": "2026-03-22",
+    "culminationTime": "15:06",
+    "phasePercentage": 16.13
+  },
+  {
+    "dayIndex": 81,
+    "date": "2026-03-23",
+    "culminationTime": "16:05",
+    "phasePercentage": 26.03
+  },
+  {
+    "dayIndex": 82,
+    "date": "2026-03-24",
+    "culminationTime": "17:08",
+    "phasePercentage": 37.27
+  },
+  {
+    "dayIndex": 83,
+    "date": "2026-03-25",
+    "culminationTime": "18:11",
+    "phasePercentage": 49.12
+  },
+  {
+    "dayIndex": 84,
+    "date": "2026-03-26",
+    "culminationTime": "19:12",
+    "phasePercentage": 60.84
+  },
+  {
+    "dayIndex": 85,
+    "date": "2026-03-27",
+    "culminationTime": "20:09",
+    "phasePercentage": 71.76
+  },
+  {
+    "dayIndex": 86,
+    "date": "2026-03-28",
+    "culminationTime": "21:01",
+    "phasePercentage": 81.35
+  },
+  {
+    "dayIndex": 87,
+    "date": "2026-03-29",
+    "culminationTime": "22:49",
+    "phasePercentage": 89.19
+  },
+  {
+    "dayIndex": 88,
+    "date": "2026-03-30",
+    "culminationTime": "23:34",
+    "phasePercentage": 94.98
+  },
+  {
+    "dayIndex": 90,
+    "date": "2026-04-01",
+    "culminationTime": "00:17",
+    "phasePercentage": 98.58
+  },
+  {
+    "dayIndex": 91,
+    "date": "2026-04-02",
+    "culminationTime": "01:00",
+    "phasePercentage": 99.92
+  },
+  {
+    "dayIndex": 92,
+    "date": "2026-04-03",
+    "culminationTime": "01:42",
+    "phasePercentage": 99.09
+  },
+  {
+    "dayIndex": 93,
+    "date": "2026-04-04",
+    "culminationTime": "02:26",
+    "phasePercentage": 96.24
+  },
+  {
+    "dayIndex": 94,
+    "date": "2026-04-05",
+    "culminationTime": "03:12",
+    "phasePercentage": 91.56
+  },
+  {
+    "dayIndex": 95,
+    "date": "2026-04-06",
+    "culminationTime": "04:00",
+    "phasePercentage": 85.31
+  },
+  {
+    "dayIndex": 96,
+    "date": "2026-04-07",
+    "culminationTime": "04:50",
+    "phasePercentage": 77.75
+  },
+  {
+    "dayIndex": 97,
+    "date": "2026-04-08",
+    "culminationTime": "05:41",
+    "phasePercentage": 69.15
+  },
+  {
+    "dayIndex": 98,
+    "date": "2026-04-09",
+    "culminationTime": "06:33",
+    "phasePercentage": 59.78
+  },
+  {
+    "dayIndex": 99,
+    "date": "2026-04-10",
+    "culminationTime": "07:24",
+    "phasePercentage": 49.92
+  },
+  {
+    "dayIndex": 100,
+    "date": "2026-04-11",
+    "culminationTime": "08:13",
+    "phasePercentage": 39.88
+  },
+  {
+    "dayIndex": 101,
+    "date": "2026-04-12",
+    "culminationTime": "09:01",
+    "phasePercentage": 30.0
+  },
+  {
+    "dayIndex": 102,
+    "date": "2026-04-13",
+    "culminationTime": "09:47",
+    "phasePercentage": 20.72
+  },
+  {
+    "dayIndex": 103,
+    "date": "2026-04-14",
+    "culminationTime": "10:33",
+    "phasePercentage": 12.52
+  },
+  {
+    "dayIndex": 104,
+    "date": "2026-04-15",
+    "culminationTime": "11:19",
+    "phasePercentage": 5.98
+  },
+  {
+    "dayIndex": 105,
+    "date": "2026-04-16",
+    "culminationTime": "12:07",
+    "phasePercentage": 1.68
+  },
+  {
+    "dayIndex": 106,
+    "date": "2026-04-17",
+    "culminationTime": "12:58",
+    "phasePercentage": 0.12
+  },
+  {
+    "dayIndex": 107,
+    "date": "2026-04-18",
+    "culminationTime": "13:53",
+    "phasePercentage": 1.62
+  },
+  {
+    "dayIndex": 108,
+    "date": "2026-04-19",
+    "culminationTime": "14:53",
+    "phasePercentage": 6.22
+  },
+  {
+    "dayIndex": 109,
+    "date": "2026-04-20",
+    "culminationTime": "15:57",
+    "phasePercentage": 13.59
+  },
+  {
+    "dayIndex": 110,
+    "date": "2026-04-21",
+    "culminationTime": "17:02",
+    "phasePercentage": 23.16
+  },
+  {
+    "dayIndex": 111,
+    "date": "2026-04-22",
+    "culminationTime": "18:05",
+    "phasePercentage": 34.13
+  },
+  {
+    "dayIndex": 112,
+    "date": "2026-04-23",
+    "culminationTime": "19:04",
+    "phasePercentage": 45.72
+  },
+  {
+    "dayIndex": 113,
+    "date": "2026-04-24",
+    "culminationTime": "19:58",
+    "phasePercentage": 57.2
+  },
+  {
+    "dayIndex": 114,
+    "date": "2026-04-25",
+    "culminationTime": "20:47",
+    "phasePercentage": 68.0
+  },
+  {
+    "dayIndex": 115,
+    "date": "2026-04-26",
+    "culminationTime": "21:33",
+    "phasePercentage": 77.65
+  },
+  {
+    "dayIndex": 116,
+    "date": "2026-04-27",
+    "culminationTime": "22:16",
+    "phasePercentage": 85.82
+  },
+  {
+    "dayIndex": 117,
+    "date": "2026-04-28",
+    "culminationTime": "22:58",
+    "phasePercentage": 92.24
+  },
+  {
+    "dayIndex": 118,
+    "date": "2026-04-29",
+    "culminationTime": "23:40",
+    "phasePercentage": 96.76
+  },
+  {
+    "dayIndex": 120,
+    "date": "2026-05-01",
+    "culminationTime": "00:23",
+    "phasePercentage": 99.28
+  },
+  {
+    "dayIndex": 121,
+    "date": "2026-05-02",
+    "culminationTime": "01:08",
+    "phasePercentage": 99.78
+  },
+  {
+    "dayIndex": 122,
+    "date": "2026-05-03",
+    "culminationTime": "01:55",
+    "phasePercentage": 98.32
+  },
+  {
+    "dayIndex": 123,
+    "date": "2026-05-04",
+    "culminationTime": "02:44",
+    "phasePercentage": 95.0
+  },
+  {
+    "dayIndex": 124,
+    "date": "2026-05-05",
+    "culminationTime": "03:35",
+    "phasePercentage": 89.96
+  },
+  {
+    "dayIndex": 125,
+    "date": "2026-05-06",
+    "culminationTime": "04:26",
+    "phasePercentage": 83.41
+  },
+  {
+    "dayIndex": 126,
+    "date": "2026-05-07",
+    "culminationTime": "05:17",
+    "phasePercentage": 75.54
+  },
+  {
+    "dayIndex": 127,
+    "date": "2026-05-08",
+    "culminationTime": "06:06",
+    "phasePercentage": 66.61
+  },
+  {
+    "dayIndex": 128,
+    "date": "2026-05-09",
+    "culminationTime": "06:54",
+    "phasePercentage": 56.85
+  },
+  {
+    "dayIndex": 129,
+    "date": "2026-05-10",
+    "culminationTime": "07:39",
+    "phasePercentage": 46.58
+  },
+  {
+    "dayIndex": 130,
+    "date": "2026-05-11",
+    "culminationTime": "08:24",
+    "phasePercentage": 36.15
+  },
+  {
+    "dayIndex": 131,
+    "date": "2026-05-12",
+    "culminationTime": "09:08",
+    "phasePercentage": 26.0
+  },
+  {
+    "dayIndex": 132,
+    "date": "2026-05-13",
+    "culminationTime": "09:54",
+    "phasePercentage": 16.68
+  },
+  {
+    "dayIndex": 133,
+    "date": "2026-05-14",
+    "culminationTime": "10:43",
+    "phasePercentage": 8.86
+  },
+  {
+    "dayIndex": 134,
+    "date": "2026-05-15",
+    "culminationTime": "11:36",
+    "phasePercentage": 3.23
+  },
+  {
+    "dayIndex": 135,
+    "date": "2026-05-16",
+    "culminationTime": "12:34",
+    "phasePercentage": 0.42
+  },
+  {
+    "dayIndex": 136,
+    "date": "2026-05-17",
+    "culminationTime": "13:37",
+    "phasePercentage": 0.85
+  },
+  {
+    "dayIndex": 137,
+    "date": "2026-05-18",
+    "culminationTime": "14:44",
+    "phasePercentage": 4.58
+  },
+  {
+    "dayIndex": 138,
+    "date": "2026-05-19",
+    "culminationTime": "15:51",
+    "phasePercentage": 11.26
+  },
+  {
+    "dayIndex": 139,
+    "date": "2026-05-20",
+    "culminationTime": "16:54",
+    "phasePercentage": 20.22
+  },
+  {
+    "dayIndex": 140,
+    "date": "2026-05-21",
+    "culminationTime": "17:52",
+    "phasePercentage": 30.66
+  },
+  {
+    "dayIndex": 141,
+    "date": "2026-05-22",
+    "culminationTime": "18:44",
+    "phasePercentage": 41.79
+  },
+  {
+    "dayIndex": 142,
+    "date": "2026-05-23",
+    "culminationTime": "19:31",
+    "phasePercentage": 52.95
+  },
+  {
+    "dayIndex": 143,
+    "date": "2026-05-24",
+    "culminationTime": "20:15",
+    "phasePercentage": 63.59
+  },
+  {
+    "dayIndex": 144,
+    "date": "2026-05-25",
+    "culminationTime": "20:57",
+    "phasePercentage": 73.33
+  },
+  {
+    "dayIndex": 145,
+    "date": "2026-05-26",
+    "culminationTime": "21:39",
+    "phasePercentage": 81.84
+  },
+  {
+    "dayIndex": 146,
+    "date": "2026-05-27",
+    "culminationTime": "22:21",
+    "phasePercentage": 88.89
+  },
+  {
+    "dayIndex": 147,
+    "date": "2026-05-28",
+    "culminationTime": "23:05",
+    "phasePercentage": 94.29
+  },
+  {
+    "dayIndex": 148,
+    "date": "2026-05-29",
+    "culminationTime": "23:51",
+    "phasePercentage": 97.91
+  },
+  {
+    "dayIndex": 150,
+    "date": "2026-05-31",
+    "culminationTime": "00:40",
+    "phasePercentage": 99.65
+  },
+  {
+    "dayIndex": 151,
+    "date": "2026-06-01",
+    "culminationTime": "01:30",
+    "phasePercentage": 99.48
+  },
+  {
+    "dayIndex": 152,
+    "date": "2026-06-02",
+    "culminationTime": "02:22",
+    "phasePercentage": 97.42
+  },
+  {
+    "dayIndex": 153,
+    "date": "2026-06-03",
+    "culminationTime": "03:13",
+    "phasePercentage": 93.53
+  },
+  {
+    "dayIndex": 154,
+    "date": "2026-06-04",
+    "culminationTime": "04:02",
+    "phasePercentage": 87.93
+  },
+  {
+    "dayIndex": 155,
+    "date": "2026-06-05",
+    "culminationTime": "04:50",
+    "phasePercentage": 80.79
+  },
+  {
+    "dayIndex": 156,
+    "date": "2026-06-06",
+    "culminationTime": "05:35",
+    "phasePercentage": 72.31
+  },
+  {
+    "dayIndex": 157,
+    "date": "2026-06-07",
+    "culminationTime": "06:19",
+    "phasePercentage": 62.71
+  },
+  {
+    "dayIndex": 158,
+    "date": "2026-06-08",
+    "culminationTime": "07:02",
+    "phasePercentage": 52.3
+  },
+  {
+    "dayIndex": 159,
+    "date": "2026-06-09",
+    "culminationTime": "07:46",
+    "phasePercentage": 41.43
+  },
+  {
+    "dayIndex": 160,
+    "date": "2026-06-10",
+    "culminationTime": "08:32",
+    "phasePercentage": 30.6
+  },
+  {
+    "dayIndex": 161,
+    "date": "2026-06-11",
+    "culminationTime": "09:21",
+    "phasePercentage": 20.39
+  },
+  {
+    "dayIndex": 162,
+    "date": "2026-06-12",
+    "culminationTime": "10:15",
+    "phasePercentage": 11.54
+  },
+  {
+    "dayIndex": 163,
+    "date": "2026-06-13",
+    "culminationTime": "11:15",
+    "phasePercentage": 4.81
+  },
+  {
+    "dayIndex": 164,
+    "date": "2026-06-14",
+    "culminationTime": "12:21",
+    "phasePercentage": 0.93
+  },
+  {
+    "dayIndex": 165,
+    "date": "2026-06-15",
+    "culminationTime": "13:29",
+    "phasePercentage": 0.35
+  },
+  {
+    "dayIndex": 166,
+    "date": "2026-06-16",
+    "culminationTime": "14:35",
+    "phasePercentage": 3.13
+  },
+  {
+    "dayIndex": 167,
+    "date": "2026-06-17",
+    "culminationTime": "15:38",
+    "phasePercentage": 8.91
+  },
+  {
+    "dayIndex": 168,
+    "date": "2026-06-18",
+    "culminationTime": "16:34",
+    "phasePercentage": 17.01
+  },
+  {
+    "dayIndex": 169,
+    "date": "2026-06-19",
+    "culminationTime": "17:25",
+    "phasePercentage": 26.69
+  },
+  {
+    "dayIndex": 170,
+    "date": "2026-06-20",
+    "culminationTime": "18:11",
+    "phasePercentage": 37.21
+  },
+  {
+    "dayIndex": 171,
+    "date": "2026-06-21",
+    "culminationTime": "18:55",
+    "phasePercentage": 47.96
+  },
+  {
+    "dayIndex": 172,
+    "date": "2026-06-22",
+    "culminationTime": "19:37",
+    "phasePercentage": 58.45
+  },
+  {
+    "dayIndex": 173,
+    "date": "2026-06-23",
+    "culminationTime": "20:20",
+    "phasePercentage": 68.29
+  },
+  {
+    "dayIndex": 174,
+    "date": "2026-06-24",
+    "culminationTime": "21:03",
+    "phasePercentage": 77.19
+  },
+  {
+    "dayIndex": 175,
+    "date": "2026-06-25",
+    "culminationTime": "21:49",
+    "phasePercentage": 84.89
+  },
+  {
+    "dayIndex": 176,
+    "date": "2026-06-26",
+    "culminationTime": "22:37",
+    "phasePercentage": 91.18
+  },
+  {
+    "dayIndex": 177,
+    "date": "2026-06-27",
+    "culminationTime": "23:26",
+    "phasePercentage": 95.87
+  },
+  {
+    "dayIndex": 179,
+    "date": "2026-06-29",
+    "culminationTime": "00:18",
+    "phasePercentage": 98.81
+  },
+  {
+    "dayIndex": 180,
+    "date": "2026-06-30",
+    "culminationTime": "01:09",
+    "phasePercentage": 99.87
+  },
+  {
+    "dayIndex": 181,
+    "date": "2026-07-01",
+    "culminationTime": "01:59",
+    "phasePercentage": 99.0
+  },
+  {
+    "dayIndex": 182,
+    "date": "2026-07-02",
+    "culminationTime": "02:48",
+    "phasePercentage": 96.19
+  },
+  {
+    "dayIndex": 183,
+    "date": "2026-07-03",
+    "culminationTime": "03:34",
+    "phasePercentage": 91.49
+  },
+  {
+    "dayIndex": 184,
+    "date": "2026-07-04",
+    "culminationTime": "04:18",
+    "phasePercentage": 85.01
+  },
+  {
+    "dayIndex": 185,
+    "date": "2026-07-05",
+    "culminationTime": "05:01",
+    "phasePercentage": 76.91
+  },
+  {
+    "dayIndex": 186,
+    "date": "2026-07-06",
+    "culminationTime": "05:43",
+    "phasePercentage": 67.44
+  },
+  {
+    "dayIndex": 187,
+    "date": "2026-07-07",
+    "culminationTime": "06:27",
+    "phasePercentage": 56.89
+  },
+  {
+    "dayIndex": 188,
+    "date": "2026-07-08",
+    "culminationTime": "07:13",
+    "phasePercentage": 45.68
+  },
+  {
+    "dayIndex": 189,
+    "date": "2026-07-09",
+    "culminationTime": "08:04",
+    "phasePercentage": 34.3
+  },
+  {
+    "dayIndex": 190,
+    "date": "2026-07-10",
+    "culminationTime": "08:59",
+    "phasePercentage": 23.43
+  },
+  {
+    "dayIndex": 191,
+    "date": "2026-07-11",
+    "culminationTime": "10:00",
+    "phasePercentage": 13.83
+  },
+  {
+    "dayIndex": 192,
+    "date": "2026-07-12",
+    "culminationTime": "11:06",
+    "phasePercentage": 6.31
+  },
+  {
+    "dayIndex": 193,
+    "date": "2026-07-13",
+    "culminationTime": "12:13",
+    "phasePercentage": 1.59
+  },
+  {
+    "dayIndex": 194,
+    "date": "2026-07-14",
+    "culminationTime": "13:18",
+    "phasePercentage": 0.08
+  },
+  {
+    "dayIndex": 195,
+    "date": "2026-07-15",
+    "culminationTime": "14:18",
+    "phasePercentage": 1.84
+  },
+  {
+    "dayIndex": 196,
+    "date": "2026-07-16",
+    "culminationTime": "15:13",
+    "phasePercentage": 6.52
+  },
+  {
+    "dayIndex": 197,
+    "date": "2026-07-17",
+    "culminationTime": "16:02",
+    "phasePercentage": 13.55
+  },
+  {
+    "dayIndex": 198,
+    "date": "2026-07-18",
+    "culminationTime": "16:48",
+    "phasePercentage": 22.27
+  },
+  {
+    "dayIndex": 199,
+    "date": "2026-07-19",
+    "culminationTime": "17:32",
+    "phasePercentage": 32.03
+  },
+  {
+    "dayIndex": 200,
+    "date": "2026-07-20",
+    "culminationTime": "18:16",
+    "phasePercentage": 42.28
+  },
+  {
+    "dayIndex": 201,
+    "date": "2026-07-21",
+    "culminationTime": "19:00",
+    "phasePercentage": 52.55
+  },
+  {
+    "dayIndex": 202,
+    "date": "2026-07-22",
+    "culminationTime": "19:45",
+    "phasePercentage": 62.49
+  },
+  {
+    "dayIndex": 203,
+    "date": "2026-07-23",
+    "culminationTime": "20:32",
+    "phasePercentage": 71.77
+  },
+  {
+    "dayIndex": 204,
+    "date": "2026-07-24",
+    "culminationTime": "21:22",
+    "phasePercentage": 80.14
+  },
+  {
+    "dayIndex": 205,
+    "date": "2026-07-25",
+    "culminationTime": "22:12",
+    "phasePercentage": 87.32
+  },
+  {
+    "dayIndex": 206,
+    "date": "2026-07-26",
+    "culminationTime": "23:04",
+    "phasePercentage": 93.1
+  },
+  {
+    "dayIndex": 207,
+    "date": "2026-07-27",
+    "culminationTime": "23:55",
+    "phasePercentage": 97.23
+  },
+  {
+    "dayIndex": 209,
+    "date": "2026-07-29",
+    "culminationTime": "00:44",
+    "phasePercentage": 99.53
+  },
+  {
+    "dayIndex": 210,
+    "date": "2026-07-30",
+    "culminationTime": "01:31",
+    "phasePercentage": 99.85
+  },
+  {
+    "dayIndex": 211,
+    "date": "2026-07-31",
+    "culminationTime": "02:16",
+    "phasePercentage": 98.09
+  },
+  {
+    "dayIndex": 212,
+    "date": "2026-08-01",
+    "culminationTime": "03:00",
+    "phasePercentage": 94.23
+  },
+  {
+    "dayIndex": 213,
+    "date": "2026-08-02",
+    "culminationTime": "03:43",
+    "phasePercentage": 88.34
+  },
+  {
+    "dayIndex": 214,
+    "date": "2026-08-03",
+    "culminationTime": "04:26",
+    "phasePercentage": 80.57
+  },
+  {
+    "dayIndex": 215,
+    "date": "2026-08-04",
+    "culminationTime": "05:11",
+    "phasePercentage": 71.17
+  },
+  {
+    "dayIndex": 216,
+    "date": "2026-08-05",
+    "culminationTime": "05:59",
+    "phasePercentage": 60.47
+  },
+  {
+    "dayIndex": 217,
+    "date": "2026-08-06",
+    "culminationTime": "06:51",
+    "phasePercentage": 48.96
+  },
+  {
+    "dayIndex": 218,
+    "date": "2026-08-07",
+    "culminationTime": "07:48",
+    "phasePercentage": 37.2
+  },
+  {
+    "dayIndex": 219,
+    "date": "2026-08-08",
+    "culminationTime": "08:50",
+    "phasePercentage": 25.91
+  },
+  {
+    "dayIndex": 220,
+    "date": "2026-08-09",
+    "culminationTime": "09:55",
+    "phasePercentage": 15.87
+  },
+  {
+    "dayIndex": 221,
+    "date": "2026-08-10",
+    "culminationTime": "11:00",
+    "phasePercentage": 7.85
+  },
+  {
+    "dayIndex": 222,
+    "date": "2026-08-11",
+    "culminationTime": "12:01",
+    "phasePercentage": 2.49
+  },
+  {
+    "dayIndex": 223,
+    "date": "2026-08-12",
+    "culminationTime": "12:58",
+    "phasePercentage": 0.12
+  },
+  {
+    "dayIndex": 224,
+    "date": "2026-08-13",
+    "culminationTime": "13:50",
+    "phasePercentage": 0.79
+  },
+  {
+    "dayIndex": 225,
+    "date": "2026-08-14",
+    "culminationTime": "14:38",
+    "phasePercentage": 4.23
+  },
+  {
+    "dayIndex": 226,
+    "date": "2026-08-15",
+    "culminationTime": "15:24",
+    "phasePercentage": 10.01
+  },
+  {
+    "dayIndex": 227,
+    "date": "2026-08-16",
+    "culminationTime": "16:09",
+    "phasePercentage": 17.59
+  },
+  {
+    "dayIndex": 228,
+    "date": "2026-08-17",
+    "culminationTime": "16:53",
+    "phasePercentage": 26.42
+  },
+  {
+    "dayIndex": 229,
+    "date": "2026-08-18",
+    "culminationTime": "17:39",
+    "phasePercentage": 36.02
+  },
+  {
+    "dayIndex": 230,
+    "date": "2026-08-19",
+    "culminationTime": "18:26",
+    "phasePercentage": 45.96
+  },
+  {
+    "dayIndex": 231,
+    "date": "2026-08-20",
+    "culminationTime": "19:15",
+    "phasePercentage": 55.89
+  },
+  {
+    "dayIndex": 232,
+    "date": "2026-08-21",
+    "culminationTime": "20:06",
+    "phasePercentage": 65.5
+  },
+  {
+    "dayIndex": 233,
+    "date": "2026-08-22",
+    "culminationTime": "20:57",
+    "phasePercentage": 74.48
+  },
+  {
+    "dayIndex": 234,
+    "date": "2026-08-23",
+    "culminationTime": "21:48",
+    "phasePercentage": 82.55
+  },
+  {
+    "dayIndex": 235,
+    "date": "2026-08-24",
+    "culminationTime": "22:38",
+    "phasePercentage": 89.41
+  },
+  {
+    "dayIndex": 236,
+    "date": "2026-08-25",
+    "culminationTime": "23:26",
+    "phasePercentage": 94.79
+  },
+  {
+    "dayIndex": 238,
+    "date": "2026-08-27",
+    "culminationTime": "00:12",
+    "phasePercentage": 98.38
+  },
+  {
+    "dayIndex": 239,
+    "date": "2026-08-28",
+    "culminationTime": "00:57",
+    "phasePercentage": 99.95
+  },
+  {
+    "dayIndex": 240,
+    "date": "2026-08-29",
+    "culminationTime": "01:41",
+    "phasePercentage": 99.29
+  },
+  {
+    "dayIndex": 241,
+    "date": "2026-08-30",
+    "culminationTime": "02:24",
+    "phasePercentage": 96.3
+  },
+  {
+    "dayIndex": 242,
+    "date": "2026-08-31",
+    "culminationTime": "03:09",
+    "phasePercentage": 91.0
+  },
+  {
+    "dayIndex": 243,
+    "date": "2026-09-01",
+    "culminationTime": "03:57",
+    "phasePercentage": 83.52
+  },
+  {
+    "dayIndex": 244,
+    "date": "2026-09-02",
+    "culminationTime": "04:48",
+    "phasePercentage": 74.16
+  },
+  {
+    "dayIndex": 245,
+    "date": "2026-09-03",
+    "culminationTime": "05:43",
+    "phasePercentage": 63.35
+  },
+  {
+    "dayIndex": 246,
+    "date": "2026-09-04",
+    "culminationTime": "06:42",
+    "phasePercentage": 51.63
+  },
+  {
+    "dayIndex": 247,
+    "date": "2026-09-05",
+    "culminationTime": "07:45",
+    "phasePercentage": 39.68
+  },
+  {
+    "dayIndex": 248,
+    "date": "2026-09-06",
+    "culminationTime": "08:48",
+    "phasePercentage": 28.24
+  },
+  {
+    "dayIndex": 249,
+    "date": "2026-09-07",
+    "culminationTime": "09:49",
+    "phasePercentage": 18.04
+  },
+  {
+    "dayIndex": 250,
+    "date": "2026-09-08",
+    "culminationTime": "10:46",
+    "phasePercentage": 9.74
+  },
+  {
+    "dayIndex": 251,
+    "date": "2026-09-09",
+    "culminationTime": "11:39",
+    "phasePercentage": 3.85
+  },
+  {
+    "dayIndex": 252,
+    "date": "2026-09-10",
+    "culminationTime": "12:28",
+    "phasePercentage": 0.64
+  },
+  {
+    "dayIndex": 253,
+    "date": "2026-09-11",
+    "culminationTime": "13:14",
+    "phasePercentage": 0.16
+  },
+  {
+    "dayIndex": 254,
+    "date": "2026-09-12",
+    "culminationTime": "14:00",
+    "phasePercentage": 2.27
+  },
+  {
+    "dayIndex": 255,
+    "date": "2026-09-13",
+    "culminationTime": "14:45",
+    "phasePercentage": 6.66
+  },
+  {
+    "dayIndex": 256,
+    "date": "2026-09-14",
+    "culminationTime": "15:30",
+    "phasePercentage": 12.92
+  },
+  {
+    "dayIndex": 257,
+    "date": "2026-09-15",
+    "culminationTime": "16:18",
+    "phasePercentage": 20.64
+  },
+  {
+    "dayIndex": 258,
+    "date": "2026-09-16",
+    "culminationTime": "17:07",
+    "phasePercentage": 29.39
+  },
+  {
+    "dayIndex": 259,
+    "date": "2026-09-17",
+    "culminationTime": "17:57",
+    "phasePercentage": 38.82
+  },
+  {
+    "dayIndex": 260,
+    "date": "2026-09-18",
+    "culminationTime": "18:48",
+    "phasePercentage": 48.58
+  },
+  {
+    "dayIndex": 261,
+    "date": "2026-09-19",
+    "culminationTime": "19:40",
+    "phasePercentage": 58.35
+  },
+  {
+    "dayIndex": 262,
+    "date": "2026-09-20",
+    "culminationTime": "20:30",
+    "phasePercentage": 67.83
+  },
+  {
+    "dayIndex": 263,
+    "date": "2026-09-21",
+    "culminationTime": "21:19",
+    "phasePercentage": 76.72
+  },
+  {
+    "dayIndex": 264,
+    "date": "2026-09-22",
+    "culminationTime": "22:05",
+    "phasePercentage": 84.68
+  },
+  {
+    "dayIndex": 265,
+    "date": "2026-09-23",
+    "culminationTime": "22:50",
+    "phasePercentage": 91.34
+  },
+  {
+    "dayIndex": 266,
+    "date": "2026-09-24",
+    "culminationTime": "23:35",
+    "phasePercentage": 96.33
+  },
+  {
+    "dayIndex": 268,
+    "date": "2026-09-26",
+    "culminationTime": "00:19",
+    "phasePercentage": 99.27
+  },
+  {
+    "dayIndex": 269,
+    "date": "2026-09-27",
+    "culminationTime": "01:04",
+    "phasePercentage": 99.84
+  },
+  {
+    "dayIndex": 270,
+    "date": "2026-09-28",
+    "culminationTime": "01:52",
+    "phasePercentage": 97.83
+  },
+  {
+    "dayIndex": 271,
+    "date": "2026-09-29",
+    "culminationTime": "02:42",
+    "phasePercentage": 93.19
+  },
+  {
+    "dayIndex": 272,
+    "date": "2026-09-30",
+    "culminationTime": "03:37",
+    "phasePercentage": 86.08
+  },
+  {
+    "dayIndex": 273,
+    "date": "2026-10-01",
+    "culminationTime": "04:37",
+    "phasePercentage": 76.84
+  },
+  {
+    "dayIndex": 274,
+    "date": "2026-10-02",
+    "culminationTime": "05:39",
+    "phasePercentage": 66.02
+  },
+  {
+    "dayIndex": 275,
+    "date": "2026-10-03",
+    "culminationTime": "06:42",
+    "phasePercentage": 54.29
+  },
+  {
+    "dayIndex": 276,
+    "date": "2026-10-04",
+    "culminationTime": "07:43",
+    "phasePercentage": 42.38
+  },
+  {
+    "dayIndex": 277,
+    "date": "2026-10-05",
+    "culminationTime": "08:40",
+    "phasePercentage": 31.01
+  },
+  {
+    "dayIndex": 278,
+    "date": "2026-10-06",
+    "culminationTime": "09:33",
+    "phasePercentage": 20.8
+  },
+  {
+    "dayIndex": 279,
+    "date": "2026-10-07",
+    "culminationTime": "10:22",
+    "phasePercentage": 12.3
+  },
+  {
+    "dayIndex": 280,
+    "date": "2026-10-08",
+    "culminationTime": "11:08",
+    "phasePercentage": 5.88
+  },
+  {
+    "dayIndex": 281,
+    "date": "2026-10-09",
+    "culminationTime": "11:53",
+    "phasePercentage": 1.81
+  },
+  {
+    "dayIndex": 282,
+    "date": "2026-10-10",
+    "culminationTime": "12:37",
+    "phasePercentage": 0.15
+  },
+  {
+    "dayIndex": 283,
+    "date": "2026-10-11",
+    "culminationTime": "13:23",
+    "phasePercentage": 0.87
+  },
+  {
+    "dayIndex": 284,
+    "date": "2026-10-12",
+    "culminationTime": "14:09",
+    "phasePercentage": 3.76
+  },
+  {
+    "dayIndex": 285,
+    "date": "2026-10-13",
+    "culminationTime": "14:58",
+    "phasePercentage": 8.57
+  },
+  {
+    "dayIndex": 286,
+    "date": "2026-10-14",
+    "culminationTime": "15:48",
+    "phasePercentage": 15.0
+  },
+  {
+    "dayIndex": 287,
+    "date": "2026-10-15",
+    "culminationTime": "16:39",
+    "phasePercentage": 22.72
+  },
+  {
+    "dayIndex": 288,
+    "date": "2026-10-16",
+    "culminationTime": "17:31",
+    "phasePercentage": 31.41
+  },
+  {
+    "dayIndex": 289,
+    "date": "2026-10-17",
+    "culminationTime": "18:21",
+    "phasePercentage": 40.77
+  },
+  {
+    "dayIndex": 290,
+    "date": "2026-10-18",
+    "culminationTime": "19:10",
+    "phasePercentage": 50.51
+  },
+  {
+    "dayIndex": 291,
+    "date": "2026-10-19",
+    "culminationTime": "19:57",
+    "phasePercentage": 60.33
+  },
+  {
+    "dayIndex": 292,
+    "date": "2026-10-20",
+    "culminationTime": "20:42",
+    "phasePercentage": 69.91
+  },
+  {
+    "dayIndex": 293,
+    "date": "2026-10-21",
+    "culminationTime": "21:26",
+    "phasePercentage": 78.9
+  },
+  {
+    "dayIndex": 294,
+    "date": "2026-10-22",
+    "culminationTime": "22:10",
+    "phasePercentage": 86.86
+  },
+  {
+    "dayIndex": 295,
+    "date": "2026-10-23",
+    "culminationTime": "22:54",
+    "phasePercentage": 93.33
+  },
+  {
+    "dayIndex": 296,
+    "date": "2026-10-24",
+    "culminationTime": "23:41",
+    "phasePercentage": 97.79
+  },
+  {
+    "dayIndex": 297,
+    "date": "2026-10-25",
+    "culminationTime": "23:31",
+    "phasePercentage": 99.78
+  },
+  {
+    "dayIndex": 299,
+    "date": "2026-10-27",
+    "culminationTime": "00:26",
+    "phasePercentage": 98.94
+  },
+  {
+    "dayIndex": 300,
+    "date": "2026-10-28",
+    "culminationTime": "01:25",
+    "phasePercentage": 95.15
+  },
+  {
+    "dayIndex": 301,
+    "date": "2026-10-29",
+    "culminationTime": "02:29",
+    "phasePercentage": 88.58
+  },
+  {
+    "dayIndex": 302,
+    "date": "2026-10-30",
+    "culminationTime": "03:33",
+    "phasePercentage": 79.67
+  },
+  {
+    "dayIndex": 303,
+    "date": "2026-10-31",
+    "culminationTime": "04:36",
+    "phasePercentage": 69.09
+  },
+  {
+    "dayIndex": 304,
+    "date": "2026-11-01",
+    "culminationTime": "05:35",
+    "phasePercentage": 57.59
+  },
+  {
+    "dayIndex": 305,
+    "date": "2026-11-02",
+    "culminationTime": "06:30",
+    "phasePercentage": 45.91
+  },
+  {
+    "dayIndex": 306,
+    "date": "2026-11-03",
+    "culminationTime": "07:19",
+    "phasePercentage": 34.7
+  },
+  {
+    "dayIndex": 307,
+    "date": "2026-11-04",
+    "culminationTime": "08:06",
+    "phasePercentage": 24.5
+  },
+  {
+    "dayIndex": 308,
+    "date": "2026-11-05",
+    "culminationTime": "08:50",
+    "phasePercentage": 15.75
+  },
+  {
+    "dayIndex": 309,
+    "date": "2026-11-06",
+    "culminationTime": "09:34",
+    "phasePercentage": 8.78
+  },
+  {
+    "dayIndex": 310,
+    "date": "2026-11-07",
+    "culminationTime": "10:18",
+    "phasePercentage": 3.8
+  },
+  {
+    "dayIndex": 311,
+    "date": "2026-11-08",
+    "culminationTime": "11:04",
+    "phasePercentage": 0.93
+  },
+  {
+    "dayIndex": 312,
+    "date": "2026-11-09",
+    "culminationTime": "11:51",
+    "phasePercentage": 0.21
+  },
+  {
+    "dayIndex": 313,
+    "date": "2026-11-10",
+    "culminationTime": "12:41",
+    "phasePercentage": 1.57
+  },
+  {
+    "dayIndex": 314,
+    "date": "2026-11-11",
+    "culminationTime": "13:32",
+    "phasePercentage": 4.85
+  },
+  {
+    "dayIndex": 315,
+    "date": "2026-11-12",
+    "culminationTime": "14:23",
+    "phasePercentage": 9.88
+  },
+  {
+    "dayIndex": 316,
+    "date": "2026-11-13",
+    "culminationTime": "15:14",
+    "phasePercentage": 16.4
+  },
+  {
+    "dayIndex": 317,
+    "date": "2026-11-14",
+    "culminationTime": "16:04",
+    "phasePercentage": 24.16
+  },
+  {
+    "dayIndex": 318,
+    "date": "2026-11-15",
+    "culminationTime": "16:51",
+    "phasePercentage": 32.92
+  },
+  {
+    "dayIndex": 319,
+    "date": "2026-11-16",
+    "culminationTime": "17:36",
+    "phasePercentage": 42.42
+  },
+  {
+    "dayIndex": 320,
+    "date": "2026-11-17",
+    "culminationTime": "18:19",
+    "phasePercentage": 52.38
+  },
+  {
+    "dayIndex": 321,
+    "date": "2026-11-18",
+    "culminationTime": "19:02",
+    "phasePercentage": 62.49
+  },
+  {
+    "dayIndex": 322,
+    "date": "2026-11-19",
+    "culminationTime": "19:44",
+    "phasePercentage": 72.37
+  },
+  {
+    "dayIndex": 323,
+    "date": "2026-11-20",
+    "culminationTime": "20:29",
+    "phasePercentage": 81.56
+  },
+  {
+    "dayIndex": 324,
+    "date": "2026-11-21",
+    "culminationTime": "21:17",
+    "phasePercentage": 89.49
+  },
+  {
+    "dayIndex": 325,
+    "date": "2026-11-22",
+    "culminationTime": "22:09",
+    "phasePercentage": 95.55
+  },
+  {
+    "dayIndex": 326,
+    "date": "2026-11-23",
+    "culminationTime": "23:07",
+    "phasePercentage": 99.09
+  },
+  {
+    "dayIndex": 328,
+    "date": "2026-11-25",
+    "culminationTime": "00:10",
+    "phasePercentage": 99.64
+  },
+  {
+    "dayIndex": 329,
+    "date": "2026-11-26",
+    "culminationTime": "01:16",
+    "phasePercentage": 96.98
+  },
+  {
+    "dayIndex": 330,
+    "date": "2026-11-27",
+    "culminationTime": "02:23",
+    "phasePercentage": 91.27
+  },
+  {
+    "dayIndex": 331,
+    "date": "2026-11-28",
+    "culminationTime": "03:26",
+    "phasePercentage": 83.03
+  },
+  {
+    "dayIndex": 332,
+    "date": "2026-11-29",
+    "culminationTime": "04:24",
+    "phasePercentage": 73.0
+  },
+  {
+    "dayIndex": 333,
+    "date": "2026-11-30",
+    "culminationTime": "05:16",
+    "phasePercentage": 61.95
+  },
+  {
+    "dayIndex": 334,
+    "date": "2026-12-01",
+    "culminationTime": "06:04",
+    "phasePercentage": 50.61
+  },
+  {
+    "dayIndex": 335,
+    "date": "2026-12-02",
+    "culminationTime": "06:49",
+    "phasePercentage": 39.58
+  },
+  {
+    "dayIndex": 336,
+    "date": "2026-12-03",
+    "culminationTime": "07:33",
+    "phasePercentage": 29.35
+  },
+  {
+    "dayIndex": 337,
+    "date": "2026-12-04",
+    "culminationTime": "08:17",
+    "phasePercentage": 20.28
+  },
+  {
+    "dayIndex": 338,
+    "date": "2026-12-05",
+    "culminationTime": "09:01",
+    "phasePercentage": 12.67
+  },
+  {
+    "dayIndex": 339,
+    "date": "2026-12-06",
+    "culminationTime": "09:47",
+    "phasePercentage": 6.75
+  },
+  {
+    "dayIndex": 340,
+    "date": "2026-12-07",
+    "culminationTime": "10:36",
+    "phasePercentage": 2.66
+  },
+  {
+    "dayIndex": 341,
+    "date": "2026-12-08",
+    "culminationTime": "11:26",
+    "phasePercentage": 0.51
+  },
+  {
+    "dayIndex": 342,
+    "date": "2026-12-09",
+    "culminationTime": "12:18",
+    "phasePercentage": 0.32
+  },
+  {
+    "dayIndex": 343,
+    "date": "2026-12-10",
+    "culminationTime": "13:09",
+    "phasePercentage": 2.05
+  },
+  {
+    "dayIndex": 344,
+    "date": "2026-12-11",
+    "culminationTime": "13:59",
+    "phasePercentage": 5.61
+  },
+  {
+    "dayIndex": 345,
+    "date": "2026-12-12",
+    "culminationTime": "14:47",
+    "phasePercentage": 10.84
+  },
+  {
+    "dayIndex": 346,
+    "date": "2026-12-13",
+    "culminationTime": "15:32",
+    "phasePercentage": 17.58
+  },
+  {
+    "dayIndex": 347,
+    "date": "2026-12-14",
+    "culminationTime": "16:15",
+    "phasePercentage": 25.61
+  },
+  {
+    "dayIndex": 348,
+    "date": "2026-12-15",
+    "culminationTime": "16:57",
+    "phasePercentage": 34.72
+  },
+  {
+    "dayIndex": 349,
+    "date": "2026-12-16",
+    "culminationTime": "17:38",
+    "phasePercentage": 44.65
+  },
+  {
+    "dayIndex": 350,
+    "date": "2026-12-17",
+    "culminationTime": "18:21",
+    "phasePercentage": 55.1
+  },
+  {
+    "dayIndex": 351,
+    "date": "2026-12-18",
+    "culminationTime": "19:05",
+    "phasePercentage": 65.68
+  },
+  {
+    "dayIndex": 352,
+    "date": "2026-12-19",
+    "culminationTime": "19:54",
+    "phasePercentage": 75.91
+  },
+  {
+    "dayIndex": 353,
+    "date": "2026-12-20",
+    "culminationTime": "20:47",
+    "phasePercentage": 85.16
+  },
+  {
+    "dayIndex": 354,
+    "date": "2026-12-21",
+    "culminationTime": "21:46",
+    "phasePercentage": 92.71
+  },
+  {
+    "dayIndex": 355,
+    "date": "2026-12-22",
+    "culminationTime": "22:51",
+    "phasePercentage": 97.81
+  },
+  {
+    "dayIndex": 356,
+    "date": "2026-12-23",
+    "culminationTime": "23:59",
+    "phasePercentage": 99.86
+  },
+  {
+    "dayIndex": 358,
+    "date": "2026-12-25",
+    "culminationTime": "01:06",
+    "phasePercentage": 98.57
+  },
+  {
+    "dayIndex": 359,
+    "date": "2026-12-26",
+    "culminationTime": "02:08",
+    "phasePercentage": 94.07
+  },
+  {
+    "dayIndex": 360,
+    "date": "2026-12-27",
+    "culminationTime": "03:05",
+    "phasePercentage": 86.88
+  },
+  {
+    "dayIndex": 361,
+    "date": "2026-12-28",
+    "culminationTime": "03:57",
+    "phasePercentage": 77.72
+  },
+  {
+    "dayIndex": 362,
+    "date": "2026-12-29",
+    "culminationTime": "04:45",
+    "phasePercentage": 67.36
+  },
+  {
+    "dayIndex": 363,
+    "date": "2026-12-30",
+    "culminationTime": "05:30",
+    "phasePercentage": 56.49
+  },
+  {
+    "dayIndex": 364,
+    "date": "2026-12-31",
+    "culminationTime": "06:15",
+    "phasePercentage": 45.68
+  }
+]
