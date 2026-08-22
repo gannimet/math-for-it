@@ -195,6 +195,7 @@ export default function TrigonometryIntro() {
                                             return `${((180 * l) / Math.PI).toFixed(0)}°`;
                                         },
                                         lines: Math.PI / 2,
+                                        subdivisions: 3,
                                     }}
                                     yAxis={{ labels: (l) => (Math.abs(l) === 1 ? l : '') }}
                                 />

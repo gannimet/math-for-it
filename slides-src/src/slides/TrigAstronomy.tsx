@@ -3,7 +3,22 @@ import { Coordinates, LaTeX, Line, Mafs, Point, Text, Theme } from 'mafs';
 import dayLengthData from '../data/day_lengths_2024_2026.json';
 import moonPhasesData from '../data/moon_phases_2026.json';
 
-export default function MoonTimes() {
+const MONTH_NAMES = [
+    'Jan',
+    'Feb',
+    'Mär',
+    'Apr',
+    'Mai',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Okt',
+    'Nov',
+    'Dez',
+];
+
+export default function TrigAstronomy() {
     return (
         <>
             <Slide data-auto-animate>
@@ -13,6 +28,7 @@ export default function MoonTimes() {
                         height={700}
                         viewBox={{ x: [-30, 1125], y: [-3, 29] }}
                         preserveAspectRatio={false}
+                        pan={false}
                     >
                         <Coordinates.Cartesian
                             xAxis={{
@@ -27,17 +43,17 @@ export default function MoonTimes() {
                             }}
                         />
 
-                        <Text x={183} y={-1.6} size={38}>
+                        <Text x={183} y={0} size={38} attach="n" attachDistance={48}>
                             2024
                         </Text>
-                        <Text x={548} y={-1.6} size={38}>
+                        <Text x={548} y={0} size={38} attach="n" attachDistance={48}>
                             2025
                         </Text>
-                        <Text x={913} y={-1.6} size={38}>
+                        <Text x={913} y={0} size={38} attach="n" attachDistance={48}>
                             2026
                         </Text>
 
-                        <Text x={70} y={27} size={38}>
+                        <Text x={0} y={27} size={38} attach="e" attachDistance={24}>
                             Stunden
                         </Text>
 
@@ -75,13 +91,6 @@ export default function MoonTimes() {
                             );
                         })}
 
-                        <g className="fragment" style={{ fontSize: '0.6em' }}>
-                            <LaTeX
-                                tex={String.raw`\textcolor{#ffe44a}{\text{Tageslänge}} \;|\; \textcolor{#15e272}{\text{Sonnenaufgang}} \;|\; \textcolor{#ae58ff}{\text{Sonnenuntergang}}`}
-                                at={[800, 27]}
-                            />
-                        </g>
-
                         <g className="fragment">
                             {dayLengthData.map(({ dayIndex, dayLengthHours }, index) => {
                                 if (index === 0) {
@@ -104,6 +113,13 @@ export default function MoonTimes() {
                                     </g>
                                 );
                             })}
+
+                            <g style={{ fontSize: '0.6em' }}>
+                                <LaTeX
+                                    tex={String.raw`\textcolor{#ffe44a}{\text{Tageslänge}} \;|\; \textcolor{#15e272}{\text{Sonnenaufgang}} \;|\; \textcolor{#ae58ff}{\text{Sonnenuntergang}}`}
+                                    at={[800, 27]}
+                                />
+                            </g>
                         </g>
                     </Mafs>
                 </div>
@@ -114,10 +130,17 @@ export default function MoonTimes() {
                 <div className="r-stretch">
                     <Mafs
                         height={700}
-                        viewBox={{ x: [0, 364], y: [0, 100] }}
+                        viewBox={{ x: [-20, 374], y: [-20, 130] }}
                         preserveAspectRatio={false}
+                        pan={false}
                     >
-                        <Coordinates.Cartesian />
+                        <Coordinates.Cartesian
+                            xAxis={{ lines: 30.35, labels: false }}
+                            yAxis={{
+                                lines: 10,
+                                labels: false,
+                            }}
+                        />
 
                         {moonPhasesData.map(({ dayIndex, phasePercentage }) => {
                             return (
@@ -129,6 +152,51 @@ export default function MoonTimes() {
                                 />
                             );
                         })}
+
+                        {Array.from({ length: 12 }, (_, index) => {
+                            return (
+                                <Text
+                                    key={index}
+                                    x={index * 30.35 + 30.35 / 2}
+                                    y={0}
+                                    attach="n"
+                                    attachDistance={56}
+                                >
+                                    {MONTH_NAMES[index]}
+                                </Text>
+                            );
+                        })}
+
+                        {Array.from({ length: 5 }, (_, index) => {
+                            return (
+                                <Text
+                                    key={index}
+                                    x={0}
+                                    y={(index + 1) * 20}
+                                    attach="w"
+                                    attachDistance={20}
+                                >
+                                    {(index + 1) * 20}
+                                </Text>
+                            );
+                        })}
+
+                        <Text x={0} y={114} attach="w" attachDistance={20}>
+                            %
+                        </Text>
+
+                        <g className="fragment">
+                            <Text
+                                x={0}
+                                y={114}
+                                attach="e"
+                                attachDistance={40}
+                                color={Theme.blue}
+                                size={38}
+                            >
+                                Mondphase bei höchster Kulmination (2026)
+                            </Text>
+                        </g>
                     </Mafs>
                 </div>
             </Slide>
