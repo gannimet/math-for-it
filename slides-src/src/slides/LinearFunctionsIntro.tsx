@@ -77,6 +77,7 @@ function LinearFunctionsIntro() {
                             point={yIntercept.point}
                             slope={slope}
                             color={Theme.blue}
+                            weight={4}
                         />
 
                         <g style={{ fontSize: '0.7em' }}>
