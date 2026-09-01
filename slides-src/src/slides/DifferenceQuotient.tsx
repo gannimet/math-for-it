@@ -22,7 +22,7 @@ function f_prime(x: number) {
     return (1 / 6) * x - 1 / 3;
 }
 
-const X = 6;
+const X = 5;
 const INITIAL_H = 3;
 
 export default function DifferenceQuotient() {
@@ -37,7 +37,7 @@ export default function DifferenceQuotient() {
             <h2>Steigungen</h2>
 
             <div className="r-stretch">
-                <Mafs height={700} pan={false} viewBox={{ x: [2, 15], y: [-3, 7] }}>
+                <Mafs height={700} pan={false} viewBox={{ x: [2, 15], y: [-2, 7] }}>
                     <Coordinates.Cartesian xAxis={{ lines: false }} yAxis={{ lines: false }} />
                     <Plot.OfX y={(x) => f(x)} />
                     <Point x={X} y={f(X)} color={Theme.green} />
@@ -56,7 +56,7 @@ export default function DifferenceQuotient() {
                     />
                     <g style={{ fontSize: '0.7em' }}>
                         <LaTeX at={[X, -1]} tex={String.raw`x`} color={Theme.green} />
-                        <LaTeX at={[-1, f(X)]} tex={String.raw`f(x)`} color={Theme.green} />
+                        <LaTeX at={[-0.8, f(X)]} tex={String.raw`f(x)`} color={Theme.green} />
                     </g>
 
                     {/* Tangent line */}
@@ -81,7 +81,7 @@ export default function DifferenceQuotient() {
                     />
                     <g style={{ fontSize: '0.7em' }}>
                         <LaTeX at={[X + h, -1]} tex={String.raw`x+h`} color={Theme.pink} />
-                        <LaTeX at={[-1.8, f(X + h)]} tex={String.raw`f(x+h)`} color={Theme.pink} />
+                        <LaTeX at={[-1.4, f(X + h)]} tex={String.raw`f(x+h)`} color={Theme.pink} />
                     </g>
 
                     {/* Approximated tangent line */}
@@ -105,11 +105,11 @@ export default function DifferenceQuotient() {
 
                     <g style={{ fontSize: '0.7em' }}>
                         <LaTeX
-                            at={[18.4, 3.5]}
-                            tex={String.raw`\textcolor{${MafsColors.green}}{m_{\text{Tan}}} \approx \textcolor{${MafsColors.green}}{${f_prime(X).toFixed(2)}}`}
+                            at={[17.7, 3.5]}
+                            tex={String.raw`\textcolor{${MafsColors.green}}{m_{\text{Tan}}} = \textcolor{${MafsColors.green}}{${f_prime(X).toFixed(1)}}`}
                         />
                         <LaTeX
-                            at={[15.5, 1.5]}
+                            at={[14.9, 1.5]}
                             tex={String.raw`\textcolor{${MafsColors.blue}}{m_{\text{Sek}}} = \dfrac{\textcolor{${MafsColors.pink}}{f(x+h)} - \textcolor{${MafsColors.green}}{f(x)}}{\textcolor{${MafsColors.pink}}{x + h} - \textcolor{${MafsColors.green}}{x}} \approx \textcolor{${MafsColors.blue}}{${((f(X + h) - f(X)) / h).toFixed(2)}}`}
                         />
                     </g>
