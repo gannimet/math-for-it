@@ -15,14 +15,14 @@ import { useState } from 'react';
 import { MafsColors } from '../consts';
 
 function f(x: number) {
-    return Math.pow(x - 3, 2) / 12 + 1;
+    return Math.pow(x - 2, 2) / 12 + 1;
 }
 
 function f_prime(x: number) {
-    return x / 6 - 1 / 2;
+    return (1 / 6) * x - 1 / 3;
 }
 
-const X = 7;
+const X = 6;
 const INITIAL_H = 3;
 
 export default function DifferenceQuotient() {
@@ -105,8 +105,12 @@ export default function DifferenceQuotient() {
 
                     <g style={{ fontSize: '0.7em' }}>
                         <LaTeX
-                            at={[17, 4]}
-                            tex={String.raw`\dfrac{\textcolor{${MafsColors.pink}}{f(x+h)} - \textcolor{${MafsColors.green}}{f(x)}}{\textcolor{${MafsColors.pink}}{x + h} - \textcolor{${MafsColors.green}}{x}}`}
+                            at={[18.4, 3.5]}
+                            tex={String.raw`\textcolor{${MafsColors.green}}{m_{\text{Tan}}} \approx \textcolor{${MafsColors.green}}{${f_prime(X).toFixed(2)}}`}
+                        />
+                        <LaTeX
+                            at={[15.5, 1.5]}
+                            tex={String.raw`\textcolor{${MafsColors.blue}}{m_{\text{Sek}}} = \dfrac{\textcolor{${MafsColors.pink}}{f(x+h)} - \textcolor{${MafsColors.green}}{f(x)}}{\textcolor{${MafsColors.pink}}{x + h} - \textcolor{${MafsColors.green}}{x}} \approx \textcolor{${MafsColors.blue}}{${((f(X + h) - f(X)) / h).toFixed(2)}}`}
                         />
                     </g>
 
