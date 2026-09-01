@@ -11,6 +11,7 @@ import {
     useMovablePoint,
     vec,
 } from 'mafs';
+import { MafsColors } from '../consts';
 
 const START_ANGLE = Math.PI / 6;
 const ANGLE_ARC_DIST = 1.3;
@@ -62,7 +63,7 @@ export default function TrigonometryRadians() {
                             Math.sin(t) * 3 * CIRCLE_RADIUS,
                         ]}
                         color={Theme.green}
-                        weight={10}
+                        weight={6}
                     />
                     <g style={{ fontSize: '0.7em' }}>
                         <LaTeX tex={String.raw`\alpha`} at={[0.8, 0.25]} color={Theme.pink} />
@@ -81,7 +82,7 @@ export default function TrigonometryRadians() {
                     <g style={{ fontSize: '0.8em' }}>
                         <g className="fragment">
                             <LaTeX
-                                tex={String.raw`\dfrac{\textcolor{#15e272}{b}}{U} = \dfrac{\textcolor{#ee00ab}{\alpha}}{360^{\circ}}`}
+                                tex={String.raw`\dfrac{\textcolor{${MafsColors.green}}{b}}{U} = \dfrac{\textcolor{${MafsColors.pink}}{\alpha}}{360^{\circ}}`}
                                 at={[5.6, 3.2]}
                                 color={Theme.foreground}
                             />
@@ -97,7 +98,7 @@ export default function TrigonometryRadians() {
 
                         <g className="fragment">
                             <LaTeX
-                                tex={String.raw`\implies \textcolor{#15e272}{b} = \dfrac{\textcolor{#ee00ab}{\alpha} \cdot U}{360^{\circ}} = \dfrac{\textcolor{#ee00ab}{\alpha} \cdot 2 \pi}{360^{\circ}} = \dfrac{\textcolor{#ee00ab}{\alpha} \pi}{180^{\circ}}`}
+                                tex={String.raw`\implies \textcolor{${MafsColors.green}}{b} = \dfrac{\textcolor{${MafsColors.pink}}{\alpha} \cdot U}{360^{\circ}} = \dfrac{\textcolor{${MafsColors.pink}}{\alpha} \cdot 2 \pi}{360^{\circ}} = \dfrac{\textcolor{${MafsColors.pink}}{\alpha} \pi}{180^{\circ}}`}
                                 at={[8.3, 1.4]}
                                 color={Theme.foreground}
                             />
@@ -105,7 +106,7 @@ export default function TrigonometryRadians() {
 
                         <g className="fragment">
                             <LaTeX
-                                tex={String.raw`\implies \textcolor{#ee00ab}{\alpha} = \dfrac{\textcolor{#15e272}{b} \cdot 180^{\circ}}{\pi}`}
+                                tex={String.raw`\implies \textcolor{${MafsColors.pink}}{\alpha} = \dfrac{\textcolor{${MafsColors.green}}{b} \cdot 180^{\circ}}{\pi}`}
                                 at={[6.45, -0.6]}
                                 color={Theme.foreground}
                             />

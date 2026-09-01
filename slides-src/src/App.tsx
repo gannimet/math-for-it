@@ -6,6 +6,7 @@ import './App.css';
 import { LATEX_MACROS } from './latex.macros';
 import BinomialPerspective from './slides/BinomialPerspective';
 import CoordinateSystems from './slides/CoordinateSystems';
+import DifferenceQuotient from './slides/DifferenceQuotient';
 import LinearFunctionsIntro from './slides/LinearFunctionsIntro';
 import LinearFunctionsTasks1 from './slides/LinearFunctionsTasks1';
 import LinearFunctionsTasks2 from './slides/LinearFunctionsTasks2';
@@ -57,6 +58,8 @@ function App() {
             <TrigonometryIntro />
             <TrigAstronomy />
             <TrigonometryRadians />
+
+            <DifferenceQuotient />
         </Deck>
     );
 }
