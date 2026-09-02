@@ -1,4 +1,4 @@
-import { Slide } from '@revealjs/react';
+import { Slide, useReveal } from '@revealjs/react';
 import {
     Coordinates,
     LaTeX,
@@ -11,7 +11,7 @@ import {
     Theme,
     vec,
 } from 'mafs';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MafsColors } from '../consts';
 
 function f(x: number) {
@@ -24,9 +24,38 @@ function f_prime(x: number) {
 
 const X = 5;
 const INITIAL_H = 3;
+const H_POINT_LINES_FRAGMENT_ID = 'hPointLinesFragment';
 
 export default function DifferenceQuotient() {
     const [h, setH] = useState(INITIAL_H);
+    const [isHPointFragmentVisible, setIsHPointFragmentVisible] = useState(false);
+    const revealDeck = useReveal();
+
+    useEffect(() => {
+        if (!revealDeck) {
+            return;
+        }
+
+        const handleShown = (event: any) => {
+            if (event.fragment.id === H_POINT_LINES_FRAGMENT_ID) {
+                setIsHPointFragmentVisible(true);
+            }
+        };
+
+        const handleHidden = (event: any) => {
+            if (event.fragment.id === H_POINT_LINES_FRAGMENT_ID) {
+                setIsHPointFragmentVisible(false);
+            }
+        };
+
+        revealDeck.on('fragmentshown', handleShown);
+        revealDeck.on('fragmenthidden', handleHidden);
+
+        return () => {
+            revealDeck.off('fragmentshown', handleShown);
+            revealDeck.off('fragmenthidden', handleHidden);
+        };
+    }, [revealDeck]);
 
     const onHPointMoved = ([newX, _]: vec.Vector2) => {
         setH(newX - X);
@@ -42,68 +71,82 @@ export default function DifferenceQuotient() {
                     <Plot.OfX y={(x) => f(x)} />
                     <Point x={X} y={f(X)} color={Theme.green} />
 
-                    <Line.Segment
-                        point1={[X, f(X)]}
-                        point2={[X, 0]}
-                        color={Theme.green}
-                        style="dashed"
-                    />
-                    <Line.Segment
-                        point1={[X, f(X)]}
-                        point2={[0, f(X)]}
-                        color={Theme.green}
-                        style="dashed"
-                    />
-                    <g style={{ fontSize: '0.7em' }}>
-                        <LaTeX at={[X, -1]} tex={String.raw`x`} color={Theme.green} />
-                        <LaTeX at={[-0.8, f(X)]} tex={String.raw`f(x)`} color={Theme.green} />
+                    <g className="fragment">
+                        <Line.Segment
+                            point1={[X, f(X)]}
+                            point2={[X, 0]}
+                            color={Theme.green}
+                            style="dashed"
+                        />
+                        <Line.Segment
+                            point1={[X, f(X)]}
+                            point2={[0, f(X)]}
+                            color={Theme.green}
+                            style="dashed"
+                        />
+                        <g style={{ fontSize: '0.7em' }}>
+                            <LaTeX at={[X, -1]} tex={String.raw`x`} color={Theme.green} />
+                            <LaTeX at={[-0.8, f(X)]} tex={String.raw`f(x)`} color={Theme.green} />
+                        </g>
                     </g>
 
-                    {/* Tangent line */}
-                    <Line.PointSlope
-                        point={[X, f(X)]}
-                        slope={f_prime(X)}
-                        color={Theme.green}
-                        weight={4}
-                    />
-
-                    <Line.Segment
-                        point1={[X + h, f(X + h)]}
-                        point2={[X + h, 0]}
-                        color={Theme.pink}
-                        style="dashed"
-                    />
-                    <Line.Segment
-                        point1={[X + h, f(X + h)]}
-                        point2={[0, f(X + h)]}
-                        color={Theme.pink}
-                        style="dashed"
-                    />
-                    <g style={{ fontSize: '0.7em' }}>
-                        <LaTeX at={[X + h, -1]} tex={String.raw`x+h`} color={Theme.pink} />
-                        <LaTeX at={[-1.4, f(X + h)]} tex={String.raw`f(x+h)`} color={Theme.pink} />
+                    <g className="fragment">
+                        {/* Tangent line */}
+                        <Line.PointSlope
+                            point={[X, f(X)]}
+                            slope={f_prime(X)}
+                            color={Theme.green}
+                            weight={4}
+                        />
                     </g>
 
-                    {/* Approximated tangent line */}
-                    <Line.ThroughPoints
-                        point1={[X, f(X)]}
-                        point2={[X + h, f(X + h)]}
-                        color={Theme.blue}
-                        weight={4}
-                    />
+                    <g className="fragment" id={H_POINT_LINES_FRAGMENT_ID}>
+                        <Line.Segment
+                            point1={[X + h, f(X + h)]}
+                            point2={[X + h, 0]}
+                            color={Theme.pink}
+                            style="dashed"
+                        />
+                        <Line.Segment
+                            point1={[X + h, f(X + h)]}
+                            point2={[0, f(X + h)]}
+                            color={Theme.pink}
+                            style="dashed"
+                        />
+                        <g style={{ fontSize: '0.7em' }}>
+                            <LaTeX at={[X + h, -1]} tex={String.raw`x+h`} color={Theme.pink} />
+                            <LaTeX
+                                at={[-1.4, f(X + h)]}
+                                tex={String.raw`f(x+h)`}
+                                color={Theme.pink}
+                            />
+                        </g>
+                    </g>
 
-                    <Polygon
-                        points={[
-                            [X, f(X)],
-                            [X + h, f(X + h)],
-                            [X + h, f(X)],
-                        ]}
-                        color={Theme.blue}
-                        weight={1}
-                        fillOpacity={0.3}
-                    />
+                    <g className="fragment">
+                        {/* Approximated tangent line */}
+                        <Line.ThroughPoints
+                            point1={[X, f(X)]}
+                            point2={[X + h, f(X + h)]}
+                            color={Theme.blue}
+                            weight={4}
+                        />
+                    </g>
 
-                    <g style={{ fontSize: '0.7em' }}>
+                    <g className="fragment">
+                        <Polygon
+                            points={[
+                                [X, f(X)],
+                                [X + h, f(X + h)],
+                                [X + h, f(X)],
+                            ]}
+                            color={Theme.blue}
+                            weight={1}
+                            fillOpacity={0.3}
+                        />
+                    </g>
+
+                    <g className="fragment" style={{ fontSize: '0.7em' }}>
                         <LaTeX
                             at={[17.7, 3.5]}
                             tex={String.raw`\textcolor{${MafsColors.green}}{m_{\text{Tan}}} = \textcolor{${MafsColors.green}}{${f_prime(X).toFixed(1)}}`}
@@ -114,11 +157,13 @@ export default function DifferenceQuotient() {
                         />
                     </g>
 
-                    <MovablePoint
-                        point={[X + h, f(X + h)]}
-                        onMove={onHPointMoved}
-                        constrain={([x, _]) => [x, f(x)]}
-                    />
+                    {isHPointFragmentVisible && (
+                        <MovablePoint
+                            point={[X + h, f(X + h)]}
+                            onMove={onHPointMoved}
+                            constrain={([x, _]) => [x, f(x)]}
+                        />
+                    )}
                 </Mafs>
             </div>
         </Slide>
