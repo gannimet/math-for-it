@@ -1,4 +1,4 @@
-import { Slide, useReveal } from '@revealjs/react';
+import { Slide } from '@revealjs/react';
 import {
     Coordinates,
     LaTeX,
@@ -11,7 +11,8 @@ import {
     Theme,
     vec,
 } from 'mafs';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useFragmentVisibility } from '../common/use-fragment-visibility';
 import { MafsColors } from '../consts';
 
 function f(x: number) {
@@ -28,34 +29,7 @@ const H_POINT_LINES_FRAGMENT_ID = 'hPointLinesFragment';
 
 export default function DifferenceQuotient() {
     const [h, setH] = useState(INITIAL_H);
-    const [isHPointFragmentVisible, setIsHPointFragmentVisible] = useState(false);
-    const revealDeck = useReveal();
-
-    useEffect(() => {
-        if (!revealDeck) {
-            return;
-        }
-
-        const handleShown = (event: any) => {
-            if (event.fragment.id === H_POINT_LINES_FRAGMENT_ID) {
-                setIsHPointFragmentVisible(true);
-            }
-        };
-
-        const handleHidden = (event: any) => {
-            if (event.fragment.id === H_POINT_LINES_FRAGMENT_ID) {
-                setIsHPointFragmentVisible(false);
-            }
-        };
-
-        revealDeck.on('fragmentshown', handleShown);
-        revealDeck.on('fragmenthidden', handleHidden);
-
-        return () => {
-            revealDeck.off('fragmentshown', handleShown);
-            revealDeck.off('fragmenthidden', handleHidden);
-        };
-    }, [revealDeck]);
+    const isHPointFragmentVisible = useFragmentVisibility(H_POINT_LINES_FRAGMENT_ID);
 
     const onHPointMoved = ([newX, _]: vec.Vector2) => {
         setH(newX - X);
