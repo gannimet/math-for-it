@@ -4,7 +4,7 @@ import 'reveal.js/reveal.css';
 import 'reveal.js/theme/moon.css';
 import './App.css';
 import { LATEX_MACROS } from './latex.macros';
-import BackPropagation from './slides/BackPropagation';
+import BackPropagation from './slides/BackProp/BackPropagation';
 import BinomialPerspective from './slides/BinomialPerspective';
 import CoordinateSystems from './slides/CoordinateSystems';
 import DifferenceQuotient from './slides/DifferenceQuotient';

@@ -1,15 +1,17 @@
 import { Slide } from '@revealjs/react';
 import { Circle, Coordinates, LaTeX, Line, Mafs, Theme } from 'mafs';
-import { useFragmentVisibility } from '../common/use-fragment-visibility';
-import { MafsColors } from '../consts';
+import { useFragmentVisibility } from '../../common/use-fragment-visibility';
+import { MafsColors } from '../../consts';
 
 const NEURON_RADIUS = 1.4;
 const FADE_OPACITY = 0.3;
 const FADE_FILL_OPACITY = 0.1;
 
+/**
+ * @deprecated
+ */
 export default function BackPropagation() {
-    const isHighlight1Visible = useFragmentVisibility('highlight-1');
-    const isHighlight2Visible = useFragmentVisibility('highlight-2');
+    const isRevealHiddenActivationVisible = useFragmentVisibility('revealHiddenActivation');
 
     return (
         <>
@@ -129,8 +131,8 @@ export default function BackPropagation() {
                         <Circle
                             center={[0, 0]}
                             radius={NEURON_RADIUS}
-                            strokeOpacity={FADE_OPACITY}
-                            fillOpacity={FADE_FILL_OPACITY}
+                            strokeOpacity={isRevealHiddenActivationVisible ? 1 : FADE_OPACITY}
+                            fillOpacity={isRevealHiddenActivationVisible ? 0.15 : FADE_FILL_OPACITY}
                         />
 
                         <Circle
@@ -181,7 +183,6 @@ export default function BackPropagation() {
                                     point2={[0, 0 - NEURON_RADIUS * 0.5]}
                                 />
                                 <LaTeX at={[-0.7, 0]} tex={String.raw`z_1^{(1)}`} />
-                                <LaTeX at={[0.7, 0]} tex={String.raw`a_1^{(1)}`} />
 
                                 <Line.Segment
                                     point1={[0, -3.5 + NEURON_RADIUS * 0.5]}
@@ -189,6 +190,14 @@ export default function BackPropagation() {
                                 />
                                 <LaTeX at={[-0.7, -3.5]} tex={String.raw`z_2^{(1)}`} />
                                 <LaTeX at={[0.7, -3.5]} tex={String.raw`a_2^{(1)}`} />
+                            </g>
+
+                            <g
+                                style={{
+                                    opacity: isRevealHiddenActivationVisible ? 1 : FADE_OPACITY,
+                                }}
+                            >
+                                <LaTeX at={[0.7, 0]} tex={String.raw`a_1^{(1)}`} />
                             </g>
 
                             <Line.Segment
@@ -224,11 +233,15 @@ export default function BackPropagation() {
                                 at={[-6.7, 3]}
                                 tex={String.raw`\dfrac{\partial C}{\partial w_{0,1}^{(2)}} = \dfrac{\partial C}{\partial z_0^{(2)}} \dfrac{\partial z_0^{(2)}}{\partial w_{0,1}^{(2)}} = \textcolor{${MafsColors.blue}}{\delta_0^{(2)}} \cdot \dfrac{\partial z_0^{(2)}}{\partial w_{0,1}^{(2)}}`}
                             />
+
+                            <g className="fragment" id="revealHiddenActivation">
+                                <LaTeX
+                                    at={[0.5, 3.1]}
+                                    tex={String.raw`= \textcolor{${MafsColors.blue}}{\delta_0^{(2)}} \cdot a_1^{(1)}`}
+                                />
+                            </g>
                         </g>
                     </Mafs>
-
-                    <div className="fragment" id="highlight-1"></div>
-                    <div className="fragment" id="highlight-2"></div>
                 </div>
             </Slide>
         </>
