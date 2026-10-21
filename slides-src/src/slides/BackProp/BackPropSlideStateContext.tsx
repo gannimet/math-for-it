@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import type { BackPropSlideState } from './state-machine';
+import type { BackPropSlideState } from './backprop-state-machine';
 
 export const BackPropSlideStateContext = createContext<BackPropSlideState | null>(null);
 

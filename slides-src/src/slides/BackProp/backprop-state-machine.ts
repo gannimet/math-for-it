@@ -1,12 +1,13 @@
+import type { vec } from 'mafs';
+import { backPropStoryboard } from './storyboard';
+
 const FADE_OPACITY = 0.3;
 const FADE_FILL_OPACITY = 0.1;
-
-export type Placement = 'hidden' | `main:${number}` | `compact:${number}`;
 
 export type BackPropSlideState = {
     mode: 'full' | 'focus'; // full = alles hell, focus = nur Hervorgehobenes hell
     highlighted: ReadonlySet<string>;
-    equations: Readonly<Record<string, Placement>>;
+    equations: Readonly<Record<string, vec.Vector2>>;
 };
 
 export type BackPropStep = {
@@ -16,7 +17,10 @@ export type BackPropStep = {
         highlight?: string[];
         unhighlight?: string[];
     };
-    eq?: Record<string, Placement>;
+    eq?: {
+        show?: Record<string, vec.Vector2>;
+        hide?: string[];
+    };
 };
 
 export const initialBackPropState: BackPropSlideState = {
@@ -24,8 +28,6 @@ export const initialBackPropState: BackPropSlideState = {
     highlighted: new Set(),
     equations: {},
 };
-
-export const backPropStoryboard: BackPropStep[] = [{ id: 'focus', network: { mode: 'focus' } }];
 
 export function applyBackPropStep(
     state: BackPropSlideState,
@@ -36,10 +38,14 @@ export function applyBackPropStep(
     step.network?.highlight?.forEach((id) => highlighted.add(id));
     step.network?.unhighlight?.forEach((id) => highlighted.delete(id));
 
+    const equations: Record<string, vec.Vector2> = { ...state.equations, ...step.eq?.show };
+
+    step.eq?.hide?.forEach((id) => delete equations[id]);
+
     return {
         mode: step.network?.mode ?? state.mode,
         highlighted,
-        equations: { ...state.equations, ...step.eq },
+        equations,
     };
 }
 
@@ -53,6 +59,6 @@ export function partOpacity(state: BackPropSlideState, id: string): number {
     return state.mode === 'full' || state.highlighted.has(id) ? 1 : FADE_OPACITY;
 }
 
-export function equationPlacement(state: BackPropSlideState, id: string): Placement {
-    return state.equations[id] ?? 'hidden';
+export function equationPlacement(state: BackPropSlideState, id: string): vec.Vector2 | undefined {
+    return state.equations[id];
 }

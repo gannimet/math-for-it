@@ -2,11 +2,12 @@ import { Slide } from '@revealjs/react';
 import { Coordinates, Mafs } from 'mafs';
 import { useMemo, useRef } from 'react';
 import { useFragmentStep } from '../../common/use-fragment-step';
+import { computeBackPropState } from './backprop-state-machine';
 import BackPropEquations from './BackPropEquations';
 import BackPropNetwork from './BackPropNetwork';
 import { BackPropSlideStateContext } from './BackPropSlideStateContext';
-import { backPropStoryboard, computeBackPropState } from './state-machine';
 import BackPropStepFragments from './StepFragments';
+import { backPropStoryboard } from './storyboard';
 
 export default function BackPropagation() {
     const rootRef = useRef<HTMLDivElement>(null);

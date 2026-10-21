@@ -1,5 +1,5 @@
 import { useBackPropSlideState } from './BackPropSlideStateContext';
-import { partOpacity } from './state-machine';
+import { partOpacity } from './backprop-state-machine';
 
 export default function NetworkPart({ id, children }: { id: string; children: React.ReactNode }) {
     const state = useBackPropSlideState();
