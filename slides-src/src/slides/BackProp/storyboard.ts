@@ -13,4 +13,12 @@ export const backPropStoryboard: BackPropStep[] = [
             },
         },
     },
+    {
+        id: 'a_0^2_moved',
+        eq: {
+            show: {
+                C_of_a: [-4, 3],
+            },
+        },
+    },
 ];

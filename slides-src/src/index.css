@@ -66,3 +66,14 @@ body {
         background-color: rgb(77, 135, 136);
     }
 }
+
+.fade {
+    transition: opacity 0.2s ease-in-out;
+    animation: fade-appear 0.2s ease-in-out;
+}
+
+@keyframes fade-appear {
+    from {
+        opacity: 0;
+    }
+}
