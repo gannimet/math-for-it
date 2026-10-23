@@ -1,12 +1,15 @@
 import type { vec } from 'mafs';
+import type { backPropEquationDefs } from './EquationRegister';
 import { backPropStoryboard } from './storyboard';
 
 const FADE_OPACITY = 0.3;
 
+export type BackpropEquationId = (typeof backPropEquationDefs)[number]['id'];
+
 export type BackPropSlideState = {
     mode: 'full' | 'focus'; // full = alles hell, focus = nur Hervorgehobenes hell
     highlighted: ReadonlySet<string>;
-    equations: Readonly<Record<string, vec.Vector2>>;
+    equations: Readonly<Partial<Record<BackpropEquationId, vec.Vector2>>>;
 };
 
 export type BackPropStep = {
@@ -17,8 +20,8 @@ export type BackPropStep = {
         unhighlight?: string[];
     };
     eq?: {
-        show?: Record<string, vec.Vector2>;
-        hide?: string[];
+        show?: Partial<Record<BackpropEquationId, vec.Vector2>>;
+        hide?: BackpropEquationId[];
     };
 };
 
@@ -37,7 +40,10 @@ export function applyBackPropStep(
     step.network?.highlight?.forEach((id) => highlighted.add(id));
     step.network?.unhighlight?.forEach((id) => highlighted.delete(id));
 
-    const equations: Record<string, vec.Vector2> = { ...state.equations, ...step.eq?.show };
+    const equations: Partial<Record<BackpropEquationId, vec.Vector2>> = {
+        ...state.equations,
+        ...step.eq?.show,
+    };
 
     step.eq?.hide?.forEach((id) => delete equations[id]);
 
@@ -58,6 +64,9 @@ export function partOpacity(state: BackPropSlideState, id: string): number {
     return state.mode === 'full' || state.highlighted.has(id) ? 1 : FADE_OPACITY;
 }
 
-export function equationPlacement(state: BackPropSlideState, id: string): vec.Vector2 | undefined {
+export function equationPlacement(
+    state: BackPropSlideState,
+    id: BackpropEquationId,
+): vec.Vector2 | undefined {
     return state.equations[id];
 }
