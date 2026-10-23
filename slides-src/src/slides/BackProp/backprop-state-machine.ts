@@ -2,7 +2,6 @@ import type { vec } from 'mafs';
 import { backPropStoryboard } from './storyboard';
 
 const FADE_OPACITY = 0.3;
-const FADE_FILL_OPACITY = 0.1;
 
 export type BackPropSlideState = {
     mode: 'full' | 'focus'; // full = alles hell, focus = nur Hervorgehobenes hell
