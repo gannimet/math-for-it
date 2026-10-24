@@ -1,10 +1,8 @@
-import { Theme } from 'mafs';
 import { MafsColors } from '../../consts';
 
 export type BackPropEquationDef = {
     id: string;
     tex: string;
-    color?: string;
 };
 
 export const backPropEquationDefs = [
@@ -18,12 +16,35 @@ export const backPropEquationDefs = [
     },
     {
         id: 'der_C_of_a',
-        tex: String.raw`\rightarrow \dfrac{\partial C}{\partial a_0^{(2)}} = 2 \left( a_0^{(2)} - y_0 \right)`,
+        tex: String.raw`\rightarrow \textcolor{${MafsColors.orange}}{\dfrac{\partial C}{\partial a_0^{(2)}}} = 2 \left( a_0^{(2)} - y_0 \right)`,
+    },
+    {
+        id: 'a_of_z',
+        tex: String.raw`a_0^{(2)} \left( z_0^{(2)} \right) = \sigma \left( z_0^{(2)} \right)`,
+    },
+    {
+        id: 'der_a_of_z',
+        tex: String.raw`\rightarrow \textcolor{${MafsColors.yellow}}{\dfrac{\partial a_0^{(2)}}{\partial z_0^{(2)}}} = \sigma^{\prime} \left( z_0^{(2)} \right)`,
+    },
+    {
+        id: 'der_C_of_z',
+        tex: String.raw`\rightarrow \dfrac{\partial C}{\partial z_0^{(2)}} = \textcolor{${MafsColors.orange}}{\dfrac{\partial C}{\partial a_0^{(2)}}} \textcolor{${MafsColors.yellow}}{\dfrac{\partial a_0^{(2)}}{\partial z_0^{(2)}}}`,
+    },
+    {
+        id: 'chain_rule',
+        tex: String.raw`\text{(Kettenregel)}`,
+    },
+    {
+        id: 'equals_delta_0^(2)',
+        tex: String.raw`= \textcolor{${MafsColors.blue}}{\delta_0^{(2)}}`,
     },
     {
         id: 'delta_0^(2)',
-        tex: String.raw`\delta_0^{(2)}`,
-        color: Theme.blue,
+        tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_0^{(2)}}`,
+    },
+    {
+        id: 'delta_0^(2)_parked_definition',
+        tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_0^{(2)}} = \dfrac{\partial C}{\partial a_0^{(2)}} \dfrac{\partial a_0^{(2)}}{\partial z_0^{(2)}}`,
     },
     {
         id: 'w_0,1^(2)',

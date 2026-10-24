@@ -2,7 +2,7 @@ import type { vec } from 'mafs';
 import type { backPropEquationDefs } from './EquationRegister';
 import { backPropStoryboard } from './storyboard';
 
-const FADE_OPACITY = 0.3;
+const FADE_OPACITY = 0.2;
 
 export type BackpropEquationId = (typeof backPropEquationDefs)[number]['id'];
 
