@@ -41,10 +41,10 @@ export default function BackPropNetwork() {
             <NetworkPart id="w_1,0^(2)">
                 <Line.Segment point1={[0, 3.5]} point2={[9, -3.5]} color={Theme.pink} />
             </NetworkPart>
-            <NetworkPart id="w_1,0^(2)">
+            <NetworkPart id="w_1,1^(2)">
                 <Line.Segment point1={[0, 0]} point2={[9, -3.5]} />
             </NetworkPart>
-            <NetworkPart id="w_1,0^(2)">
+            <NetworkPart id="w_1,2^(2)">
                 <Line.Segment point1={[0, -3.5]} point2={[9, -3.5]} />
             </NetworkPart>
 

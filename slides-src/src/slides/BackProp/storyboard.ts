@@ -15,11 +15,11 @@ export const backPropStoryboard: BackPropStep[] = [
     {
         id: 'output-activation-cost',
         network: {
-            highlight: ['a_0^(2)'],
+            highlight: ['n_0^(2)', 'a_0^(2)'],
         },
         eq: {
             show: {
-                C_of_a: [-7, 5.5],
+                C_of_a: [-8, 5.5],
             },
             hide: ['total_C_chain'],
         },
@@ -28,7 +28,7 @@ export const backPropStoryboard: BackPropStep[] = [
         id: 'output-activation-cost_derivative',
         eq: {
             show: {
-                der_C_of_a: [1, 5.25],
+                der_C_of_a: [-0.8, 5.25],
             },
         },
     },
@@ -39,7 +39,7 @@ export const backPropStoryboard: BackPropStep[] = [
         },
         eq: {
             show: {
-                a_of_z: [-7.3, 2.5],
+                a_of_z: [-8.3, 2.5],
             },
         },
     },
@@ -47,7 +47,7 @@ export const backPropStoryboard: BackPropStep[] = [
         id: 'output-activation-weighted-sum_derivative',
         eq: {
             show: {
-                der_a_of_z: [0, 2.5],
+                der_a_of_z: [-1.9, 2.5],
             },
         },
     },
@@ -55,8 +55,8 @@ export const backPropStoryboard: BackPropStep[] = [
         id: 'cost-weighted-sum_derivative',
         eq: {
             show: {
-                der_C_of_z: [-7.2, -0.5],
-                chain_rule: [-7, -2.7],
+                der_C_of_z: [-8.2, -0.5],
+                chain_rule: [-8, -2.5],
             },
         },
     },
@@ -64,7 +64,7 @@ export const backPropStoryboard: BackPropStep[] = [
         id: 'delta_0^(2)',
         eq: {
             show: {
-                'equals_delta_0^(2)': [-2.7, -0.4],
+                'equals_delta_0^(2)': [-4, -0.4],
                 'delta_0^(2)': [7.7, 1.4],
             },
         },
@@ -87,11 +87,80 @@ export const backPropStoryboard: BackPropStep[] = [
         },
     },
     {
-        id: 'w_0,1^(2)',
+        id: 'output-weighted-sum_of_inner-activation_1',
+        network: {
+            highlight: [
+                'w_0,0^(2)',
+                'w_0,1^(2)',
+                'w_0,2^(2)',
+                'n_0^(1)',
+                'n_1^(1)',
+                'n_2^(1)',
+                'a_0^(1)',
+                'a_1^(1)',
+                'a_2^(1)',
+            ],
+            unhighlight: ['a_0^(2)', 's_0^(2)'],
+        },
         eq: {
             show: {
-                'w_0,1^(2)': [4.5, 0.6],
+                'z0_of_a': [-9, 5.5],
+                'w_0,0^(2)': [4.3, 2.6],
+                'w_0,1^(2)': [4, 0.6],
+                'w_0,2^(2)': [4.3, -2.7],
             },
+        },
+    },
+    {
+        id: 'output-weighted-sum_of_inner-activation_derivative_1',
+        network: {
+            unhighlight: ['w_0,0^(2)', 'w_0,2^(2)', 'n_0^(1)', 'n_2^(1)', 'a_0^(1)', 'a_2^(1)'],
+        },
+        eq: {
+            show: {
+                der_z0_of_a1: [-3.4, 5.7],
+            },
+            hide: ['w_0,0^(2)', 'w_0,2^(2)'],
+        },
+    },
+    {
+        id: 'output-weighted-sum_of_inner-activation_2',
+        network: {
+            highlight: [
+                'w_1,0^(2)',
+                'w_1,1^(2)',
+                'w_1,2^(2)',
+                'n_0^(1)',
+                'n_1^(1)',
+                'n_2^(1)',
+                'a_0^(1)',
+                'a_1^(1)',
+                'a_2^(1)',
+                'n_1^(2)',
+                'z_1^(2)',
+            ],
+            unhighlight: ['w_0,1^(2)', 'n_0^(2)', 'z_0^(2)', 's_0^(2)'],
+        },
+        eq: {
+            show: {
+                'w_1,0^(2)': [3.5, 1.7],
+                'w_1,1^(2)': [3.5, -0.7],
+                'w_1,2^(2)': [3.5, -2.9],
+                'z1_of_a': [-9, 2.5],
+            },
+            hide: ['w_0,1^(2)'],
+        },
+    },
+    {
+        id: 'output-weighted-sum_of_inner-activation_derivative_2',
+        network: {
+            unhighlight: ['n_0^(1)', 'n_2^(1)', 'a_0^(1)', 'a_2^(1)', 'w_1,0^(2)', 'w_1,2^(2)'],
+        },
+        eq: {
+            show: {
+                der_z1_of_a1: [-3.4, 2.7],
+            },
+            hide: ['w_1,0^(2)', 'w_1,2^(2)'],
         },
     },
 ];

@@ -47,7 +47,43 @@ export const backPropEquationDefs = [
         tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_0^{(2)}} = \dfrac{\partial C}{\partial a_0^{(2)}} \dfrac{\partial a_0^{(2)}}{\partial z_0^{(2)}}`,
     },
     {
+        id: 'z0_of_a',
+        tex: String.raw`\displaystyle z_0^{(2)} = \sum\limits_{i} \; a_i^{(1)} \, w_{0,i}^{(2)}`,
+    },
+    {
+        id: 'w_0,0^(2)',
+        tex: String.raw`\textcolor{${MafsColors.pink}}{w_{0,0}^{(2)}}`,
+    },
+    {
         id: 'w_0,1^(2)',
         tex: String.raw`w_{0,1}^{(2)}`,
+    },
+    {
+        id: 'w_0,2^(2)',
+        tex: String.raw`w_{0,2}^{(2)}`,
+    },
+    {
+        id: 'der_z0_of_a1',
+        tex: String.raw`\rightarrow \dfrac{\partial z_0^{(2)}}{\partial a_1^{(1)}} = w_{0,1}^{(2)}`,
+    },
+    {
+        id: 'w_1,0^(2)',
+        tex: String.raw`\textcolor{${MafsColors.pink}}{w_{1,0}^{(2)}}`,
+    },
+    {
+        id: 'w_1,1^(2)',
+        tex: String.raw`w_{1,1}^{(2)}`,
+    },
+    {
+        id: 'w_1,2^(2)',
+        tex: String.raw`w_{1,2}^{(2)}`,
+    },
+    {
+        id: 'z1_of_a',
+        tex: String.raw`\displaystyle z_1^{(2)} = \sum\limits_{i} \; a_i^{(1)} \, w_{1,i}^{(2)}`,
+    },
+    {
+        id: 'der_z1_of_a1',
+        tex: String.raw`\rightarrow \dfrac{\partial z_1^{(2)}}{\partial a_1^{(1)}} = w_{1,1}^{(2)}`,
     },
 ] as const satisfies readonly BackPropEquationDef[];
