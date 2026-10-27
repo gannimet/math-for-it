@@ -2,14 +2,20 @@ import type { vec } from 'mafs';
 import type { backPropEquationDefs } from './EquationRegister';
 import { backPropStoryboard } from './storyboard';
 
-const FADE_OPACITY = 0.2;
+const NETWORK_FADE_OPACITY = 0.2;
+const EQUATION_FADE_OPACITY = 0.5;
 
 export type BackpropEquationId = (typeof backPropEquationDefs)[number]['id'];
+
+export type BackpropEquationState = {
+    position: vec.Vector2;
+    faded: boolean;
+};
 
 export type BackPropSlideState = {
     mode: 'full' | 'focus'; // full = alles hell, focus = nur Hervorgehobenes hell
     highlighted: ReadonlySet<string>;
-    equations: Readonly<Partial<Record<BackpropEquationId, vec.Vector2>>>;
+    equations: Readonly<Partial<Record<BackpropEquationId, BackpropEquationState>>>;
 };
 
 export type BackPropStep = {
@@ -22,6 +28,8 @@ export type BackPropStep = {
     eq?: {
         show?: Partial<Record<BackpropEquationId, vec.Vector2>>;
         hide?: BackpropEquationId[];
+        fade?: BackpropEquationId[];
+        unfade?: BackpropEquationId[];
     };
 };
 
@@ -40,10 +48,29 @@ export function applyBackPropStep(
     step.network?.highlight?.forEach((id) => highlighted.add(id));
     step.network?.unhighlight?.forEach((id) => highlighted.delete(id));
 
-    const equations: Partial<Record<BackpropEquationId, vec.Vector2>> = {
+    const equations: Partial<Record<BackpropEquationId, BackpropEquationState>> = {
         ...state.equations,
-        ...step.eq?.show,
     };
+
+    Object.keys(step.eq?.show ?? {}).forEach((id) => {
+        const eid = id as BackpropEquationId;
+        equations[eid] = {
+            position: step.eq?.show?.[eid]!,
+            faded: false,
+        };
+    });
+
+    step.eq?.fade?.forEach((id) => {
+        if (equations[id]) {
+            equations[id].faded = true;
+        }
+    });
+
+    step.eq?.unfade?.forEach((id) => {
+        if (equations[id]) {
+            equations[id].faded = false;
+        }
+    });
 
     step.eq?.hide?.forEach((id) => delete equations[id]);
 
@@ -61,12 +88,16 @@ export function computeBackPropState(stepIndex: number): BackPropSlideState {
 }
 
 export function partOpacity(state: BackPropSlideState, id: string): number {
-    return state.mode === 'full' || state.highlighted.has(id) ? 1 : FADE_OPACITY;
+    return state.mode === 'full' || state.highlighted.has(id) ? 1 : NETWORK_FADE_OPACITY;
 }
 
 export function equationPlacement(
     state: BackPropSlideState,
     id: BackpropEquationId,
 ): vec.Vector2 | undefined {
-    return state.equations[id];
+    return state.equations[id]?.position;
+}
+
+export function equationOpacity(state: BackPropSlideState, id: BackpropEquationId): number {
+    return state.equations[id]?.faded === true ? EQUATION_FADE_OPACITY : 1;
 }

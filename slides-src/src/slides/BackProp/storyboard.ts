@@ -87,7 +87,7 @@ export const backPropStoryboard: BackPropStep[] = [
         },
     },
     {
-        id: 'output-weighted-sum_of_inner-activation_1',
+        id: 'output-weighted-sum_of_output-weight_1',
         network: {
             highlight: [
                 'w_0,0^(2)',
@@ -112,9 +112,51 @@ export const backPropStoryboard: BackPropStep[] = [
         },
     },
     {
-        id: 'output-weighted-sum_of_inner-activation_derivative_1',
+        id: 'output-weighted-sum_of_output-weight_derivative_1',
         network: {
             unhighlight: ['w_0,0^(2)', 'w_0,2^(2)', 'n_0^(1)', 'n_2^(1)', 'a_0^(1)', 'a_2^(1)'],
+        },
+        eq: {
+            show: {
+                der_z0_of_w01: [-3.4, 5.7],
+            },
+            hide: ['w_0,0^(2)', 'w_0,2^(2)'],
+        },
+    },
+    {
+        id: 'C_chain-rule-to-output-weight',
+        eq: {
+            show: {
+                der_C_of_w_01: [-5.8, 2.9],
+                chain_rule: [-5.8, 0.9],
+            },
+        },
+    },
+    {
+        id: 'C_chain-rule-to-output-weight_expansion',
+        eq: {
+            show: {
+                der_C_of_w_01_expansion: [4.5, 2.9],
+            },
+        },
+    },
+    {
+        id: 'purge_output-derivative-formulas',
+        network: {
+            highlight: ['n_0^(1)', 'a_0^(1)', 'n_2^(1)', 'a_2^(1)', 'w_0,0^(2)', 'w_0,2^(2)'],
+        },
+        eq: {
+            show: {
+                'w_0,0^(2)': [4.3, 2.6],
+                'w_0,2^(2)': [4.3, -2.7],
+            },
+            hide: ['der_z0_of_w01', 'der_C_of_w_01', 'der_C_of_w_01_expansion', 'chain_rule'],
+        },
+    },
+    {
+        id: 'output-weighted-sum_of_inner-activation_derivative_1',
+        network: {
+            unhighlight: ['n_0^(1)', 'a_0^(1)', 'n_2^(1)', 'a_2^(1)', 'w_0,0^(2)', 'w_0,2^(2)'],
         },
         eq: {
             show: {
@@ -144,11 +186,12 @@ export const backPropStoryboard: BackPropStep[] = [
         eq: {
             show: {
                 'w_1,0^(2)': [3.5, 1.7],
-                'w_1,1^(2)': [3.5, -0.7],
+                'w_1,1^(2)': [4.5, -1.2],
                 'w_1,2^(2)': [3.5, -2.9],
-                'z1_of_a': [-9, 2.5],
+                'z1_of_a': [-9, 2.7],
             },
             hide: ['w_0,1^(2)'],
+            fade: ['z0_of_a', 'der_z0_of_a1'],
         },
     },
     {
@@ -158,9 +201,33 @@ export const backPropStoryboard: BackPropStep[] = [
         },
         eq: {
             show: {
-                der_z1_of_a1: [-3.4, 2.7],
+                der_z1_of_a1: [-3.4, 2.9],
             },
             hide: ['w_1,0^(2)', 'w_1,2^(2)'],
+        },
+    },
+    {
+        id: 'a_1^1-multi-path-explainer',
+        network: {
+            highlight: [
+                'w_0,1^(2)',
+                'n_0^(2)',
+                'z_0^(2)',
+                's_0^(2)',
+                'a_0^(2)',
+                's_1^(2)',
+                'a_1^(2)',
+            ],
+        },
+        eq: {
+            show: {
+                'a_1^1-multi-path-explainer': [-7.8, -0],
+                'w_0,1^(2)': [4, 0.6],
+                'delta_1^(2)': [7.7, -2.2],
+                'delta_i^(2)_parked_definition': [9.8, 5.7],
+            },
+            hide: ['delta_0^(2)_parked_definition'],
+            unfade: ['z0_of_a', 'der_z0_of_a1'],
         },
     },
 ];

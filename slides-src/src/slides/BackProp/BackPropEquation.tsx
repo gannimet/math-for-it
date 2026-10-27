@@ -1,7 +1,7 @@
 import AnimatedLaTeX from '../../common/AnimatedLaTeX';
 import Fade from '../../common/Fade';
 import { useLastDefined } from '../../common/use-last-defined';
-import { equationPlacement } from './backprop-state-machine';
+import { equationOpacity, equationPlacement } from './backprop-state-machine';
 import { useBackPropSlideState } from './BackPropSlideStateContext';
 import type { BackPropEquationDef, backPropEquationDefs } from './EquationRegister';
 
@@ -12,6 +12,7 @@ export type BackPropEquationProps = BackPropEquationDef & { id: EquationId };
 export default function BackPropEquation({ id, tex }: BackPropEquationProps) {
     const state = useBackPropSlideState();
     const position = equationPlacement(state, id);
+    const opacity = equationOpacity(state, id);
     const lastPosition = useLastDefined(position);
 
     if (!lastPosition) {
@@ -20,7 +21,9 @@ export default function BackPropEquation({ id, tex }: BackPropEquationProps) {
 
     return (
         <Fade visible={position !== undefined}>
-            <AnimatedLaTeX at={lastPosition} tex={tex} />
+            <g className="fade" style={{ opacity }}>
+                <AnimatedLaTeX at={lastPosition} tex={tex} />
+            </g>
         </Fade>
     );
 }

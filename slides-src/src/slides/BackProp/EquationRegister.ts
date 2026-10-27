@@ -63,6 +63,41 @@ export const backPropEquationDefs = [
         tex: String.raw`w_{0,2}^{(2)}`,
     },
     {
+        id: 'der_z0_of_w01',
+        tex: String.raw`\rightarrow \textcolor{${MafsColors.green}}{\dfrac{\partial z_0^{(2)}}{\partial w_{0,1}^{(2)}}} = a_1^{(1)}`,
+    },
+    {
+        id: 'der_C_of_w_01',
+        tex: String.raw`
+            \rightarrow \dfrac{\partial C}{\partial w_{0,1}^{(2)}} =
+            \textcolor{${MafsColors.blue}}{
+                \dfrac{\partial C}{\partial a_0^{(2)}}
+                \dfrac{\partial a_0^{(2)}}{\partial z_0^{(2)}}
+            }
+            \textcolor{${MafsColors.green}}{
+                \dfrac{\partial z_0^{(2)}}{\partial w_{0,1}^{(2)}}
+            } =
+            \textcolor{${MafsColors.blue}}{\delta_0^{(2)}} \cdot \textcolor{${MafsColors.green}}{a_1^{(1)}}
+        `,
+    },
+    {
+        id: 'der_C_of_w_01_expansion',
+        tex: String.raw`
+            =
+            \textcolor{${MafsColors.blue}}{
+                2 \left( a_0^{(2)} - y_0 \right)
+            }
+            \cdot
+            \textcolor{${MafsColors.blue}}{
+                \sigma^{\prime} \left( z_0^{(2)} \right)
+            }
+            \cdot
+            \textcolor{${MafsColors.green}}{
+                a_1^{(1)}
+            }
+        `,
+    },
+    {
         id: 'der_z0_of_a1',
         tex: String.raw`\rightarrow \dfrac{\partial z_0^{(2)}}{\partial a_1^{(1)}} = w_{0,1}^{(2)}`,
     },
@@ -85,5 +120,20 @@ export const backPropEquationDefs = [
     {
         id: 'der_z1_of_a1',
         tex: String.raw`\rightarrow \dfrac{\partial z_1^{(2)}}{\partial a_1^{(1)}} = w_{1,1}^{(2)}`,
+    },
+    {
+        id: 'a_1^1-multi-path-explainer',
+        tex: String.raw`\begin{aligned}
+            &a_1^{(1)} \text{ beeinflusst die Kosten} \\
+            &\text{über beide Pfade.}
+            \end{aligned}`,
+    },
+    {
+        id: 'delta_1^(2)',
+        tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_1^{(2)}}`,
+    },
+    {
+        id: 'delta_i^(2)_parked_definition',
+        tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_i^{(2)}} = \dfrac{\partial C}{\partial a_i^{(2)}} \dfrac{\partial a_i^{(2)}}{\partial z_i^{(2)}}`,
     },
 ] as const satisfies readonly BackPropEquationDef[];
