@@ -221,13 +221,22 @@ export const backPropStoryboard: BackPropStep[] = [
         },
         eq: {
             show: {
-                'a_1^1-multi-path-explainer': [-7.8, -0],
+                'a_1^1-multi-path-explainer': [3.5, 4.5],
                 'w_0,1^(2)': [4, 0.6],
                 'delta_1^(2)': [7.7, -2.2],
                 'delta_i^(2)_parked_definition': [9.8, 5.7],
             },
             hide: ['delta_0^(2)_parked_definition'],
             unfade: ['z0_of_a', 'der_z0_of_a1'],
+        },
+    },
+    {
+        id: 'der_C_of_a1_inner_sum',
+        eq: {
+            show: {
+                der_C_of_a1_inner_explainer: [-8.2, -0.5],
+                der_C_of_a1_inner: [-4.2, -3.2],
+            },
         },
     },
 ];

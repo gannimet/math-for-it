@@ -99,7 +99,7 @@ export const backPropEquationDefs = [
     },
     {
         id: 'der_z0_of_a1',
-        tex: String.raw`\rightarrow \dfrac{\partial z_0^{(2)}}{\partial a_1^{(1)}} = w_{0,1}^{(2)}`,
+        tex: String.raw`\rightarrow \dfrac{\partial z_0^{(2)}}{\partial a_1^{(1)}} = \textcolor{${MafsColors.yellow}}{w_{0,1}^{(2)}}`,
     },
     {
         id: 'w_1,0^(2)',
@@ -119,13 +119,13 @@ export const backPropEquationDefs = [
     },
     {
         id: 'der_z1_of_a1',
-        tex: String.raw`\rightarrow \dfrac{\partial z_1^{(2)}}{\partial a_1^{(1)}} = w_{1,1}^{(2)}`,
+        tex: String.raw`\rightarrow \dfrac{\partial z_1^{(2)}}{\partial a_1^{(1)}} = \textcolor{${MafsColors.yellow}}{w_{1,1}^{(2)}}`,
     },
     {
         id: 'a_1^1-multi-path-explainer',
         tex: String.raw`\begin{aligned}
-            &a_1^{(1)} \text{ beeinflusst die Kosten} \\
-            &\text{über beide Pfade.}
+            &a_1^{(1)} \text{ beeinflusst die} \\
+            &\text{Kosten über beide Pfade.}
             \end{aligned}`,
     },
     {
@@ -135,5 +135,37 @@ export const backPropEquationDefs = [
     {
         id: 'delta_i^(2)_parked_definition',
         tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_i^{(2)}} = \dfrac{\partial C}{\partial a_i^{(2)}} \dfrac{\partial a_i^{(2)}}{\partial z_i^{(2)}}`,
+    },
+    {
+        id: 'der_C_of_a1_inner_explainer',
+        tex: String.raw`
+         \begin{aligned}
+            &\text{Addieren der Pfade} \\
+            &\text{und Kettenregel ergibt:}
+        \end{aligned}
+        `,
+    },
+    {
+        id: 'der_C_of_a1_inner',
+        tex: String.raw`
+            \displaystyle
+            \dfrac{\partial C}{\partial a_1^{(1)}}
+            =
+            \textcolor{${MafsColors.blue}}{\dfrac{\partial C}{\partial z_0^{(2)}}}
+            \,
+            \textcolor{${MafsColors.yellow}}{w_{0,1}^{(2)}}
+            +
+            \textcolor{${MafsColors.blue}}{\dfrac{\partial C}{\partial z_1^{(2)}}}
+            \,
+            \textcolor{${MafsColors.yellow}}{w_{1,1}^{(2)}}
+            =
+            \textcolor{${MafsColors.blue}}{\delta_0^{(2)}}
+            \,
+            \textcolor{${MafsColors.yellow}}{w_{0,1}^{(2)}}
+            +
+            \textcolor{${MafsColors.blue}}{\delta_1^{(2)}}
+            \,
+            \textcolor{${MafsColors.yellow}}{w_{1,1}^{(2)}}
+        `,
     },
 ] as const satisfies readonly BackPropEquationDef[];
