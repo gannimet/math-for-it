@@ -224,7 +224,7 @@ export const backPropStoryboard: BackPropStep[] = [
                 'a_1^1-multi-path-explainer': [3.5, 4.5],
                 'w_0,1^(2)': [4, 0.6],
                 'delta_1^(2)': [7.7, -2.2],
-                'delta_i^(2)_parked_definition': [9.8, 5.7],
+                'delta_i^(l)_parked_definition': [9.8, 5.7],
             },
             hide: ['delta_0^(2)_parked_definition'],
             unfade: ['z0_of_a', 'der_z0_of_a1'],
@@ -250,6 +250,9 @@ export const backPropStoryboard: BackPropStep[] = [
     },
     {
         id: 'purge_inner-activation-derivation-formulas',
+        network: {
+            unhighlight: ['z_0^(2)', 's_0^(2)', 'a_0^(2)', 'z_1^(2)', 's_1^(2)', 'a_1^(2)'],
+        },
         eq: {
             hide: [
                 'z0_of_a',
@@ -261,6 +264,43 @@ export const backPropStoryboard: BackPropStep[] = [
             ],
             show: {
                 der_C_of_a1_inner_shortened: [3.4, 5.6],
+            },
+        },
+    },
+    {
+        id: 'a_of_z_inner',
+        network: {
+            highlight: ['s_1^(1)', 'z_1^(1)'],
+        },
+        eq: {
+            show: {
+                a_of_z_inner: [-8.2, 5.5],
+            },
+        },
+    },
+    {
+        id: 'a_of_z_inner_derivative',
+        eq: {
+            show: {
+                der_a_of_z_inner: [-8.3, 3],
+            },
+        },
+    },
+    {
+        id: 'delta_1^(1)',
+        eq: {
+            show: {
+                'delta_1^(1)_explainer': [-6.8, -0.6],
+                'delta_1^(1)': [-1.3, 1.4],
+                'delta_1^(1)_formula': [-8, -3.6],
+            },
+        },
+    },
+    {
+        id: 'delta_1^(1)_expansion',
+        eq: {
+            show: {
+                'delta_1^(1)_formula_expansion': [-0.6, -3.73],
             },
         },
     },

@@ -133,13 +133,13 @@ export const backPropEquationDefs = [
         tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_1^{(2)}}`,
     },
     {
-        id: 'delta_i^(2)_parked_definition',
-        tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_i^{(2)}} = \dfrac{\partial C}{\partial a_i^{(2)}} \dfrac{\partial a_i^{(2)}}{\partial z_i^{(2)}}`,
+        id: 'delta_i^(l)_parked_definition',
+        tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_i^{(l)}} = \dfrac{\partial C}{\partial a_i^{(l)}} \dfrac{\partial a_i^{(l)}}{\partial z_i^{(l)}}`,
     },
     {
         id: 'der_C_of_a1_inner_explainer',
         tex: String.raw`
-         \begin{aligned}
+        \begin{aligned}
             &\text{Addieren der Pfade} \\
             &\text{und Kettenregel ergibt:}
         \end{aligned}
@@ -178,6 +178,56 @@ export const backPropEquationDefs = [
         \textcolor{${MafsColors.blue}}{\delta_i^{(2)}}
         \,
         w_{i,1}^{(2)}
+        `,
+    },
+    {
+        id: 'a_of_z_inner',
+        tex: String.raw`a_1^{(1)} \left( z_1^{(1)} \right) = \sigma \left( z_1^{(1)} \right)`,
+    },
+    {
+        id: 'der_a_of_z_inner',
+        tex: String.raw`
+        \rightarrow
+        \dfrac{\partial a_1^{(1)}}{\partial z_1^{(1)}} 
+        =
+        \textcolor{${MafsColors.orange}}{\sigma^{\prime} \left( z_1^{(1)} \right)}`,
+    },
+    {
+        id: 'delta_1^(1)_explainer',
+        tex: String.raw`
+        \begin{aligned}
+            &\text{Gesamtableitung bis zu } z_1^{(1)} \text{ in} \\
+            &\text{der Variable } \textcolor{${MafsColors.blue}}{\delta_1^{(1)}} \text{ (Kettenregel):}
+        \end{aligned}
+        `,
+    },
+    {
+        id: 'delta_1^(1)',
+        tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_1^{(1)}}`,
+    },
+    {
+        id: 'delta_1^(1)_formula',
+        tex: String.raw`
+            \textcolor{${MafsColors.blue}}{\delta_1^{(1)}}
+            =
+            \dfrac{\partial C}{\partial a_1^{(1)}}
+            \cdot
+            \textcolor{${MafsColors.orange}}{\sigma^{\prime} \left( z_1^{(1)} \right)}
+        `,
+    },
+    {
+        id: 'delta_1^(1)_formula_expansion',
+        tex: String.raw`
+        =
+        \displaystyle
+        \left(
+        \sum_i \;
+        \textcolor{${MafsColors.blue}}{\delta_i^{(2)}}
+        \,
+        w_{i,1}^{(2)}
+        \right)
+        \cdot
+        \textcolor{${MafsColors.orange}}{\sigma^{\prime} \left( z_1^{(1)} \right)}
         `,
     },
 ] as const satisfies readonly BackPropEquationDef[];
