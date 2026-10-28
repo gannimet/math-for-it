@@ -239,4 +239,29 @@ export const backPropStoryboard: BackPropStep[] = [
             },
         },
     },
+    {
+        id: 'der_C_of_a1_inner_sum_shortened',
+        eq: {
+            hide: ['der_C_of_a1_inner'],
+            show: {
+                der_C_of_a1_inner_shortened: [-8.67, -3.23],
+            },
+        },
+    },
+    {
+        id: 'purge_inner-activation-derivation-formulas',
+        eq: {
+            hide: [
+                'z0_of_a',
+                'z1_of_a',
+                'der_z0_of_a1',
+                'der_z1_of_a1',
+                'der_C_of_a1_inner_explainer',
+                'a_1^1-multi-path-explainer',
+            ],
+            show: {
+                der_C_of_a1_inner_shortened: [3.4, 5.6],
+            },
+        },
+    },
 ];

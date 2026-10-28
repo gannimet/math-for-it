@@ -168,4 +168,16 @@ export const backPropEquationDefs = [
             \textcolor{${MafsColors.yellow}}{w_{1,1}^{(2)}}
         `,
     },
+    {
+        id: 'der_C_of_a1_inner_shortened',
+        tex: String.raw`
+        \displaystyle
+        \dfrac{\partial C}{\partial a_1^{(1)}}
+        =
+        \sum_i \;
+        \textcolor{${MafsColors.blue}}{\delta_i^{(2)}}
+        \,
+        w_{i,1}^{(2)}
+        `,
+    },
 ] as const satisfies readonly BackPropEquationDef[];
