@@ -7,23 +7,23 @@ export default function BackPropNetwork() {
     return (
         <>
             {/* W^(1) */}
-            <NetworkPart id="w_0,0^(1)">
+            <NetworkPart id="w_1,0^(1)">
                 <Line.Segment point1={[-9, 3.5]} point2={[0, 0]} color={Theme.pink} />
             </NetworkPart>
-            <NetworkPart id="w_1,0^(1)">
+            <NetworkPart id="w_1,1^(1)">
                 <Line.Segment point1={[-9, 0]} point2={[0, 0]} />
             </NetworkPart>
-            <NetworkPart id="w_2,0^(1)">
+            <NetworkPart id="w_1,2^(1)">
                 <Line.Segment point1={[-9, -3.5]} point2={[0, 0]} />
             </NetworkPart>
 
-            <NetworkPart id="w_0,1^(1)">
+            <NetworkPart id="w_2,0^(1)">
                 <Line.Segment point1={[-9, 3.5]} point2={[0, -3.5]} color={Theme.pink} />
             </NetworkPart>
-            <NetworkPart id="w_1,1^(1)">
+            <NetworkPart id="w_2,1^(1)">
                 <Line.Segment point1={[-9, 0]} point2={[0, -3.5]} />
             </NetworkPart>
-            <NetworkPart id="w_2,1^(1)">
+            <NetworkPart id="w_2,2^(1)">
                 <Line.Segment point1={[-9, -3.5]} point2={[0, -3.5]} />
             </NetworkPart>
 

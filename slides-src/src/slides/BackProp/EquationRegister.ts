@@ -98,6 +98,16 @@ export const backPropEquationDefs = [
         `,
     },
     {
+        id: 'output-weights-general-explainer',
+        tex: String.raw`
+        \rightarrow \;
+        \begin{aligned}
+            &\text{Ableitung nach den anderen} \\
+            &\text{Output-Gewichten analog.}
+        \end{aligned}
+        `,
+    },
+    {
         id: 'der_z0_of_a1',
         tex: String.raw`\rightarrow \dfrac{\partial z_0^{(2)}}{\partial a_1^{(1)}} = \textcolor{${MafsColors.yellow}}{w_{0,1}^{(2)}}`,
     },
@@ -190,7 +200,7 @@ export const backPropEquationDefs = [
         \rightarrow
         \dfrac{\partial a_1^{(1)}}{\partial z_1^{(1)}} 
         =
-        \textcolor{${MafsColors.orange}}{\sigma^{\prime} \left( z_1^{(1)} \right)}`,
+        \textcolor{${MafsColors.green}}{\sigma^{\prime} \left( z_1^{(1)} \right)}`,
     },
     {
         id: 'delta_1^(1)_explainer',
@@ -212,7 +222,7 @@ export const backPropEquationDefs = [
             =
             \dfrac{\partial C}{\partial a_1^{(1)}}
             \cdot
-            \textcolor{${MafsColors.orange}}{\sigma^{\prime} \left( z_1^{(1)} \right)}
+            \textcolor{${MafsColors.green}}{\sigma^{\prime} \left( z_1^{(1)} \right)}
         `,
     },
     {
@@ -227,7 +237,35 @@ export const backPropEquationDefs = [
         w_{i,1}^{(2)}
         \right)
         \cdot
-        \textcolor{${MafsColors.orange}}{\sigma^{\prime} \left( z_1^{(1)} \right)}
+        \textcolor{${MafsColors.green}}{\sigma^{\prime} \left( z_1^{(1)} \right)}
+        `,
+    },
+    {
+        id: 'w_1,0^(1)',
+        tex: String.raw`\textcolor{${MafsColors.pink}}{w_{1,0}^{(1)}}`,
+    },
+    {
+        id: 'w_1,1^(1)',
+        tex: String.raw`w_{1,1}^{(1)}`,
+    },
+    {
+        id: 'w_1,2^(1)',
+        tex: String.raw`w_{1,2}^{(1)}`,
+    },
+    {
+        id: 'z_1^(1)_of_inner_weights',
+        tex: String.raw`
+        \displaystyle
+        z_1^{(1)} = \sum\limits_{i} \; a_i^{(0)} \, w_{1,i}^{(1)}
+        `,
+    },
+    {
+        id: 'der_z_1^(1)_of_w_1,2^(1)',
+        tex: String.raw`
+        \rightarrow
+        \dfrac{\partial z_1^{(1)}}{\partial w_{1,2}^{(1)}}
+        =
+        a_2^{(0)}
         `,
     },
 ] as const satisfies readonly BackPropEquationDef[];

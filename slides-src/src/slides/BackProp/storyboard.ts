@@ -141,6 +141,14 @@ export const backPropStoryboard: BackPropStep[] = [
         },
     },
     {
+        id: 'output-weights-general-explainer',
+        eq: {
+            show: {
+                'output-weights-general-explainer': [-6.8, -1.3],
+            },
+        },
+    },
+    {
         id: 'purge_output-derivative-formulas',
         network: {
             highlight: ['n_0^(1)', 'a_0^(1)', 'n_2^(1)', 'a_2^(1)', 'w_0,0^(2)', 'w_0,2^(2)'],
@@ -150,7 +158,13 @@ export const backPropStoryboard: BackPropStep[] = [
                 'w_0,0^(2)': [4.3, 2.6],
                 'w_0,2^(2)': [4.3, -2.7],
             },
-            hide: ['der_z0_of_w01', 'der_C_of_w_01', 'der_C_of_w_01_expansion', 'chain_rule'],
+            hide: [
+                'der_z0_of_w01',
+                'der_C_of_w_01',
+                'der_C_of_w_01_expansion',
+                'chain_rule',
+                'output-weights-general-explainer',
+            ],
         },
     },
     {
@@ -301,6 +315,56 @@ export const backPropStoryboard: BackPropStep[] = [
         eq: {
             show: {
                 'delta_1^(1)_formula_expansion': [-0.6, -3.73],
+            },
+        },
+    },
+    {
+        id: 'highlight-purge-for-inner-weight-derivative',
+        network: {
+            unhighlight: ['w_0,1^(2)', 'w_1,1^(2)', 'n_0^(2)', 'n_1^(2)', 'a_1^(1)', 's_1^(1)'],
+            highlight: [
+                'n_0^(0)',
+                'a_0^(0)',
+                'n_1^(0)',
+                'a_1^(0)',
+                'n_2^(0)',
+                'a_2^(0)',
+                'w_1,0^(1)',
+                'w_1,1^(1)',
+                'w_1,2^(1)',
+            ],
+        },
+        eq: {
+            hide: [
+                'delta_i^(l)_parked_definition',
+                'delta_1^(1)_explainer',
+                'delta_1^(1)_formula',
+                'delta_1^(1)_formula_expansion',
+                'der_C_of_a1_inner_shortened',
+                'a_of_z_inner',
+                'der_a_of_z_inner',
+                'delta_0^(2)',
+                'delta_1^(2)',
+                'w_0,1^(2)',
+                'w_1,1^(2)',
+            ],
+            show: {
+                'w_1,0^(1)': [-4.5, 2.5],
+                'w_1,1^(1)': [-5.8, 0.6],
+                'w_1,2^(1)': [-4.5, -2.7],
+                'z_1^(1)_of_inner_weights': [-4, 5.5],
+            },
+        },
+    },
+    {
+        id: 'z_of_inner-weight_derivative',
+        network: {
+            unhighlight: ['w_1,0^(1)', 'w_1,1^(1)', 'n_0^(0)', 'a_0^(0)', 'n_1^(0)', 'a_1^(0)'],
+        },
+        eq: {
+            hide: ['w_1,0^(1)', 'w_1,1^(1)'],
+            show: {
+                'der_z_1^(1)_of_w_1,2^(1)': [1.8, 5.7],
             },
         },
     },
