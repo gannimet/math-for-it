@@ -368,4 +368,32 @@ export const backPropStoryboard: BackPropStep[] = [
             },
         },
     },
+    {
+        id: 'C_of_inner-weight_derivative',
+        eq: {
+            show: {
+                'z_1^(1)_of_inner_weights': [-8, 5.5],
+                'der_z_1^(1)_of_w_1,2^(1)': [-2.2, 5.7],
+                'der_C_of_w12_inner': [-5.7, 3],
+                'delta_i^(l)_parked_definition': [9.8, 5.7],
+                'chain_rule': [-5.7, 1],
+            },
+        },
+    },
+    {
+        id: 'C_of_inner-weight_derivative_expansion',
+        eq: {
+            show: {
+                der_C_of_w12_inner_expansion: [5, 2.795],
+            },
+        },
+    },
+    {
+        id: 'inner-weights-general-explainer',
+        eq: {
+            show: {
+                'inner-weights-general-explainer': [7.5, 0],
+            },
+        },
+    },
 ];

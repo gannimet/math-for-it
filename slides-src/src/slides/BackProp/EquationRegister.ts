@@ -64,7 +64,7 @@ export const backPropEquationDefs = [
     },
     {
         id: 'der_z0_of_w01',
-        tex: String.raw`\rightarrow \textcolor{${MafsColors.green}}{\dfrac{\partial z_0^{(2)}}{\partial w_{0,1}^{(2)}}} = a_1^{(1)}`,
+        tex: String.raw`\rightarrow \textcolor{${MafsColors.green}}{\dfrac{\partial z_0^{(2)}}{\partial w_{0,1}^{(2)}} = a_1^{(1)}}`,
     },
     {
         id: 'der_C_of_w_01',
@@ -263,9 +263,64 @@ export const backPropEquationDefs = [
         id: 'der_z_1^(1)_of_w_1,2^(1)',
         tex: String.raw`
         \rightarrow
-        \dfrac{\partial z_1^{(1)}}{\partial w_{1,2}^{(1)}}
+        \textcolor{${MafsColors.green}}
+        {
+            \dfrac{\partial z_1^{(1)}}{\partial w_{1,2}^{(1)}}
+            =
+            a_2^{(0)}
+        }
+        `,
+    },
+    {
+        id: 'der_C_of_w12_inner',
+        tex: String.raw`
+        \begin{aligned}
+        \rightarrow
+        \dfrac{\partial C}{\partial w_{1,2}^{(1)}}
+        &=
+        \textcolor{${MafsColors.blue}}
+        {
+            \dfrac{\partial C}{\partial a_1^{(1)}}
+            \dfrac{\partial a_1^{(1)}}{\partial z_1^{(1)}}
+        }
+        \textcolor{${MafsColors.green}}{
+            \dfrac{\partial z_1^{(1)}}{\partial w_{1,2}^{(1)}}
+        } 
         =
-        a_2^{(0)}
+        \textcolor{${MafsColors.blue}}{\delta_1^{(1)}}
+        \cdot
+        \textcolor{${MafsColors.green}}{a_2^{(0)}}
+        \end{aligned}
+        `,
+    },
+    {
+        id: 'der_C_of_w12_inner_expansion',
+        tex: String.raw`
+        =
+        \displaystyle
+        \textcolor{${MafsColors.blue}}
+        {
+            \left(
+            \sum_i \;
+            \delta_i^{(2)}
+            \,
+            w_{i,1}^{(2)}
+            \right)
+            \cdot
+            \sigma^{\prime} \left( z_1^{(1)} \right)
+        }
+        \cdot
+        \textcolor{${MafsColors.green}}{a_2^{(0)}}
+        `,
+    },
+    {
+        id: 'inner-weights-general-explainer',
+        tex: String.raw`
+        \rightarrow \;
+        \begin{aligned}
+            &\text{Ableitung nach den anderen} \\
+            &\text{inneren Gewichten analog.}
+        \end{aligned}
         `,
     },
 ] as const satisfies readonly BackPropEquationDef[];
