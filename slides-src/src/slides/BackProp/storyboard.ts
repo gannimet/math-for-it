@@ -396,4 +396,43 @@ export const backPropStoryboard: BackPropStep[] = [
             },
         },
     },
+    {
+        id: 'purge_for_final_summary',
+        network: {
+            unhighlight: ['n_2^(0)', 'a_2^(0)', 'n_1^(1)', 'z_1^(1)', 'w_1,2^(1)'],
+        },
+        eq: {
+            hide: [
+                'w_1,2^(1)',
+                'inner-weights-general-explainer',
+                'delta_1^(1)',
+                'chain_rule',
+                'delta_i^(l)_parked_definition',
+                'der_C_of_w12_inner_expansion',
+                'der_C_of_w12_inner',
+                'z_1^(1)_of_inner_weights',
+                'der_z_1^(1)_of_w_1,2^(1)',
+            ],
+            show: {
+                summary: [0, 6],
+            },
+        },
+    },
+    {
+        id: 'total_C_derivative',
+        eq: {
+            show: {
+                total_der_of_C: [0, 3.5],
+            },
+        },
+    },
+    {
+        id: 'with_delta_formula',
+        eq: {
+            show: {
+                with: [0, 1.5],
+                delta_formula_full: [0, -1.6],
+            },
+        },
+    },
 ];

@@ -144,7 +144,7 @@ export const backPropEquationDefs = [
     },
     {
         id: 'delta_i^(l)_parked_definition',
-        tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_i^{(l)}} = \dfrac{\partial C}{\partial a_i^{(l)}} \dfrac{\partial a_i^{(l)}}{\partial z_i^{(l)}}`,
+        tex: String.raw`\textcolor{${MafsColors.blue}}{\delta_j^{(l)}} = \dfrac{\partial C}{\partial a_j^{(l)}} \dfrac{\partial a_j^{(l)}}{\partial z_j^{(l)}}`,
     },
     {
         id: 'der_C_of_a1_inner_explainer',
@@ -321,6 +321,44 @@ export const backPropEquationDefs = [
             &\text{Ableitung nach den anderen} \\
             &\text{inneren Gewichten analog.}
         \end{aligned}
+        `,
+    },
+    {
+        id: 'summary',
+        tex: String.raw`\text{Zusammenfassend:}`,
+    },
+    {
+        id: 'total_der_of_C',
+        tex: String.raw`
+        \dfrac{\partial C}{\partial w_{jk}^{(l)}}
+        =
+        \textcolor{${MafsColors.blue}}{
+            \dfrac{\partial C}{\partial a_{j}^{(l)}}
+            \dfrac{\partial a_{j}^{(l)}}{\partial z_{j}^{(l)}}
+        }
+        \textcolor{${MafsColors.green}}{
+            \dfrac{\partial z_{j}^{(l)}}{\partial w_{jk}^{(l)}}
+        }
+        =
+        \textcolor{${MafsColors.blue}}{\delta_j^{(l)}}
+        \cdot
+        \textcolor{${MafsColors.green}}{a_k^{(l-1)}}
+        `,
+    },
+    {
+        id: 'with',
+        tex: String.raw`\text{mit:}`,
+    },
+    {
+        id: 'delta_formula_full',
+        tex: String.raw`
+        \displaystyle
+        \textcolor{${MafsColors.blue}}{\delta_j^{(l)}}
+        =
+        \begin{cases}
+        \; 2 \left( a_j^{(l)} - y_j \right) \cdot \sigma^{\prime} \left( z_j^{(l)} \right) & \text{für Output-Neuronen} \\[1.5em]
+        \; \left( \sum\limits_{i} \; \textcolor{${MafsColors.blue}}{\delta_i^{(l+1)}} \, w_{ij}^{(l+1)} \right) \cdot \sigma^{\prime} \left( z_j^{(l)} \right) & \text{für innere Neuronen}
+        \end{cases}
         `,
     },
 ] as const satisfies readonly BackPropEquationDef[];
