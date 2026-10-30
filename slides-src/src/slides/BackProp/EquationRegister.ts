@@ -357,7 +357,12 @@ export const backPropEquationDefs = [
         =
         \begin{cases}
         \; 2 \left( a_j^{(l)} - y_j \right) \cdot \sigma^{\prime} \left( z_j^{(l)} \right) & \text{für Output-Neuronen} \\[1.5em]
-        \; \left( \sum\limits_{i} \; \textcolor{${MafsColors.blue}}{\delta_i^{(l+1)}} \, w_{ij}^{(l+1)} \right) \cdot \sigma^{\prime} \left( z_j^{(l)} \right) & \text{für innere Neuronen}
+        \;
+        \left(
+            \sum\limits_{i} \; \textcolor{${MafsColors.blue}}{\delta_i^{(l+1)}} \, w_{ij}^{(l+1)}
+        \right)
+        \cdot
+        \sigma^{\prime} \left( z_j^{(l)} \right) & \text{für innere Neuronen}
         \end{cases}
         `,
     },

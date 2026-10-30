@@ -422,7 +422,7 @@ export const backPropStoryboard: BackPropStep[] = [
         id: 'total_C_derivative',
         eq: {
             show: {
-                total_der_of_C: [0, 3.5],
+                total_der_of_C: [0, 3.7],
             },
         },
     },
@@ -431,7 +431,7 @@ export const backPropStoryboard: BackPropStep[] = [
         eq: {
             show: {
                 with: [0, 1.5],
-                delta_formula_full: [0, -1.6],
+                delta_formula_full: [0, -1.4],
             },
         },
     },
