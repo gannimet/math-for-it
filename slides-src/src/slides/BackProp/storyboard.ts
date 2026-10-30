@@ -435,4 +435,23 @@ export const backPropStoryboard: BackPropStep[] = [
             },
         },
     },
+    {
+        id: 'rearrange_for_delta_w_formula',
+        eq: {
+            show: {
+                total_der_of_C: [-6, 5.5],
+                delta_formula_full: [3, 1.5],
+                delta_w_definition: [-4.5, -3],
+            },
+            hide: ['summary', 'with'],
+        },
+    },
+    {
+        id: 'add_delta_w_to_w',
+        eq: {
+            show: {
+                add_delta_w_to_w: [7, -2.8],
+            },
+        },
+    },
 ];

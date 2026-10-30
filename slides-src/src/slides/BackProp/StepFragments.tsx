@@ -1,9 +1,19 @@
-export default function BackPropStepFragments({ count }: { count: number }) {
+import type { BackPropStep } from './backprop-state-machine';
+
+export type BackPropStepFragmentsProps = { storyboard: BackPropStep[] };
+
+export default function BackPropStepFragments({ storyboard }: BackPropStepFragmentsProps) {
     return (
         <>
-            {Array.from({ length: count }, (_, i) => {
+            {storyboard.map((step, i) => {
                 return (
-                    <span key={i} className="fragment" data-fragment-index={i} aria-hidden="true" />
+                    <span
+                        key={i}
+                        className="fragment"
+                        data-fragment-index={i}
+                        id={step.id}
+                        aria-hidden="true"
+                    />
                 );
             })}
         </>

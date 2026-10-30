@@ -366,4 +366,17 @@ export const backPropEquationDefs = [
         \end{cases}
         `,
     },
+    {
+        id: 'delta_w_definition',
+        tex: String.raw`
+        \text{Anpassung der Gewichte:} \;\;
+        \Delta w_{jk}^{(l)} = - \eta \cdot \dfrac{\partial C}{\partial w_{jk}^{(l)}}
+        `,
+    },
+    {
+        id: 'add_delta_w_to_w',
+        tex: String.raw`
+        \rightarrow \; w_{jk}^{(l)} := w_{jk}^{(l)} + \Delta w_{jk}^{(l)}
+        `,
+    },
 ] as const satisfies readonly BackPropEquationDef[];

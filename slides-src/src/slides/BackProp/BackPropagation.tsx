@@ -17,7 +17,7 @@ export default function BackPropagation() {
     return (
         <Slide>
             <div className="r-stretch" ref={rootRef}>
-                <BackPropStepFragments count={backPropStoryboard.length} />
+                <BackPropStepFragments storyboard={backPropStoryboard} />
 
                 <BackPropSlideStateContext.Provider value={state}>
                     <Mafs height={800} pan={false} viewBox={{ x: [-10, 10], y: [-5, 7] }}>
