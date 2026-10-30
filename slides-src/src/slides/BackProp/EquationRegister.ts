@@ -376,7 +376,7 @@ export const backPropEquationDefs = [
     {
         id: 'add_delta_w_to_w',
         tex: String.raw`
-        \rightarrow \; w_{jk}^{(l)} := w_{jk}^{(l)} + \Delta w_{jk}^{(l)}
+        \rightarrow \; w_{jk}^{(l)} \coloneqq w_{jk}^{(l)} + \Delta w_{jk}^{(l)}
         `,
     },
 ] as const satisfies readonly BackPropEquationDef[];

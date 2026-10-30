@@ -8,6 +8,7 @@
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
+        "predeploy": "npm run build",
         "deploy": "scp -rp ./dist/* uberspace:/home/richardw/html/mathe-kurs"
     },
     "dependencies": {
